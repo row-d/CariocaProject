@@ -1,0 +1,313 @@
+\documentclass[60pt]{article}
+
+\title{Informe}
+%%------------ Paquetes utilizados
+\usepackage[utf8]{inputenc} %Indica qué codificación se está usando ISO-8859-1(latin1)  o utf8  
+\usepackage[spanish]{babel}%Indica que escribiermos en español
+%\usepackage{amsmath} % Comandos extras para matemáticas (cajas para ecuaciones,
+% etc)
+%\usepackage{amssymb} % Simbolos matematicos (por lo tanto)
+\usepackage{graphicx} % Incluir imágenes en LaTeX
+\usepackage{color} % Para colorear texto
+%\usepackage{subfigure} % subfiguras
+\usepackage{float} %Podemos usar el especificador [H] en las figuras para que se
+% queden donde queramos
+\usepackage{algorithm,algpseudocode}%para crear algoritmos
+\usepackage{capt-of} % Permite usar etiquetas fuera de elementos flotantes
+% (etiquetas de figuras)
+\usepackage{sidecap} % Para poner el texto de las imágenes al lado
+    \sidecaptionvpos{figure}{c} % Para que el texto se alinie al centro vertical
+\usepackage{caption} % Para poder quitar numeracion de figuras
+\usepackage{subcaption}
+%\usepackage{commath} % funcionalidades extras para diferenciales, integrales,
+% etc (\od, \dif, etc)
+%\usepackage{cancel} % para cancelar expresiones (\cancelto{0}{x})
+\usepackage{anysize}                    % Para personalizar el ancho de  los márgenes
+\marginsize{2cm}{2cm}{2cm}{2cm} % Izquierda, derecha, arriba, abajo
+\usepackage{appendix}
+\usepackage{fancyhdr} %Personalizar encabezado y pie de página
+\usepackage{listingsutf8} % Para usar código fuente
+\usepackage{parcolumns}
+\usepackage{blindtext}
+%%------------ Redefinición de Comandos
+\renewcommand{\appendixname}{Anéxos}
+\renewcommand{\appendixtocname}{Anéxos}
+\renewcommand{\appendixpagename}{Anéxos} 
+\newcommand*\sepline{%
+    \begin{center}
+        \rule[1ex]{.5\textwidth}{.5pt}
+    \end{center}
+    }
+%%-----------Refininamiento de codigo
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[scaled]{beramono}
+\usepackage{xcolor}
+\definecolor{lstbgc}{gray}{0.9}
+\lstdefinestyle{myCpp}{%
+    language=C++,
+    tabsize = 4,
+    framesep = 3mm,
+    frame=none, 
+    classoffset = 0,
+    columns = fixed,
+    basewidth = 0.5em,
+    basicstyle = \footnotesize\ttfamily,
+    keywordstyle = \bfseries\color[rgb]{0,0,1},
+    commentstyle = \itshape\color[rgb]{0.133,0.545,0.133},
+    stringstyle = \color[rgb]{0.627,0.126,0.941},
+    extendedchars = true,
+    escapeinside = {@}{@},
+    breaklines = true,
+    backgroundcolor=\color{lstbgc},
+    numbers = none
+}
+% \captionsetup[lstlisting]{%
+%     ,box=colorbox
+%     ,boxcolor=black
+%     ,font={color=white}
+%     ,justification=RaggedRight
+%     ,singlelinecheck=off % in case you want to have short lines aligned left.
+% }
+
+%Comandos  definidos para la plantilla
+\newcommand{\university}{Universidad Católica de la Santísima Concepción}
+\newcommand{\universityshort}{UCSC}
+\newcommand{\faculty}{Facultad de Ingeniería}
+\newcommand{\depto}{Ingeniería Civil Informática}
+\newcommand{\class}{Taller de programación II}
+\newcommand{\classcode}{N1069C/1}
+\newcommand{\Title}{Carioca}
+\newcommand{\Author}{
+David Gómez Pinto
+
+Lucas Ayala Casanova}
+\newcommand{\teacher}{Diego Maldonado Montiel}
+\newcommand{\Date}{17 de octubre de 2022}%Aquí ingrese la fecha de entrega (\today inserta la fecha actual)
+\renewcommand{\lstlistingname}{Fragmento}% Listing -> Fragmento
+\floatname{algorithm}{Algoritmo}%algorithm->Algotimo
+%%------------ Configuraciones específicas de paquetes
+
+%%-------- Color y Referencias
+% Para que las referencias sean hipervínculos a las figuras o ecuaciones y
+% aparezcan en color
+\usepackage[colorlinks=false,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+%\usepackage{hyperref} 
+
+
+%%-------- Personalizar encabezado y pie de página
+\pagestyle{fancy}
+%%-- Portada
+\fancypagestyle{mytitlepagestyle}{%
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyhead[L]{
+		\includegraphics[width=6cm]{images/template/logo_facultad.png}
+	}
+}
+%%-- Páginas
+\fancypagestyle{mypagestyle}{%
+	\fancyhf{}
+	\fancyhead[L]{\footnotesize \universityshort} %encabezado izquierda
+	\fancyhead[R]{\footnotesize \faculty}   % dereecha
+	\fancyfoot[L]{\footnotesize \depto}  % Pie izquierda
+	\fancyfoot[R]{\footnotesize \class}  % Pie derecha
+	\fancyfoot[C]{\thepage}  % centro%\fancyfoot[L]{\footnotesize Estándares de desarrollo}  %izquierda
+	\renewcommand{\footrulewidth}{0.4pt}
+}
+
+
+%%-------- Personalizar código fuente
+
+\definecolor{dkgreen}{rgb}{0,0.6,0} % Definimos colores para usar en el código
+\definecolor{gray}{rgb}{0.5,0.5,0.5} 
+% configuración para el lenguaje que queramos utilizar
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},
+	frame=single, 
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+\title{Plantilla para informes de tarea}
+%---------------------------------------------------------------------------------------
+
+\begin{document}
+\thispagestyle{mytitlepagestyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{mytitlepagestyle}													%%%
+\noindent	                                                                        %%%
+\begin{center}                                                                      %%%
+    %%%
+    \vspace*{0.8cm}																		%%%
+    %%%
+    \begin{minipage}{0.9\textwidth} 													%%%
+        \begin{center}																	%%%
+            \textsc{\huge \uppercase{\depto}}\\[0.5cm]  						%%%
+            \textsc{\Large \class}\\[1.5cm] 								%%%
+        \end{center}																	%%%
+    \end{minipage}\\[0.5cm]																%%%
+    %%%
+    \vspace*{\fill}																		%%%
+    %%%                       
+    %%{ \Large  \preTitle}\\[0.2cm]															%%%
+    { \Huge \bfseries \Title}\\[0.4cm]										%%%
+    %%%
+    \vspace*{\fill}																		%%%
+    %%%
+    \begin{minipage}{0.46\textwidth}                                                    %%%
+        \begin{flushleft} \large                                                            %%%
+            \emph{Autor:}\\   																	%%%
+            \Author\\																	%%%
+            %%%
+        \end{flushleft}                                                                     %%%
+    \end{minipage}
+    %%%
+    \begin{minipage}{0.52\textwidth}
+        \vspace{-0.6cm}                                         %%%
+        \begin{flushright} \large                                                           %%%
+            \emph{Profesor:} \\                                                                 %%%
+            \teacher\\                                                   %%%
+        \end{flushright}                                                                    %%%
+    \end{minipage}
+    \vspace*{1cm}
+    %\begin{flushleft}
+
+    %\end{flushleft}
+    %%%
+    %%        \flushleft{\textbf{\Large Ing. Mecatrónica} }\\                                                                     %%%
+    \vspace*{\fill}
+    \begin{center}
+        {\large \Date}                                                                 %%%
+    \end{center}
+\end{center}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%% TERMINA PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{mypagestyle}
+%%------------  Tabla de contenidos ó índice (Se genera solo a partir de las secciones que creen)
+\tableofcontents
+
+\newpage
+%%------------  Comience a editar aquí su documento
+
+
+
+\section{Introducción.}\label{cap:intro}
+
+En el presente documento se procedera a realizar un análisis a profundidad de la propuesta de software para el determinado juego de mesa: Cariocas. En el cual se detallaran los procedimientos que se ejecutan a nivel de sistema para luego facilitar el uso del usuario final (en adelante llamado jugador).
+
+
+
+\subsection{Próposito del Sistema.}\label{cap:proposito}
+Proveer de un entorno integral con tal de que el jugador logre competir contra otros de manera justa, correcta e imparcial ante el sistema con el cual el jugador pueda disfrutar de la entretención que entrega el presente juego de cartas.
+
+\subsection{Alcance del Sistema.}\label{cap:alcance}
+El sistema se va a encargar de implementar la logica y reglas del juego de tal forma que el jugador pueda interactuar con este a traves de una interfaz grafica
+
+\subsection{Objetivos y criterios de éxito del proyecto.}\label{cap:objetivos}
+Garantizar la correcta resolución del juego, libre de errores y contratiempos que afecten la dinámica de este.
+
+Proporcionar un sistema el cual sea fácil e intuitivo de seguir y usar.
+
+Entregar un sistema en el que ningún jugador se vea beneficiado más allá de las reglas del juego.
+\subsection{Definiciones, siglas y abreviaturas.}\label{cap:definiciones}
+Pinta - Símbolos que agrupan un determinado tipo de carta, entre ellas existen los siguientes grupos: Picas, Corazones, Rombos y Tréboles.
+
+Trio - Agrupación de tres cartas de un mismo valor númerico.
+
+Escala - Secuencia de cuatro cartas de una misma pinta y con valor númerico ascendente.
+
+Escala Real - Secuencia de doce cartas de una misma pinta y un valor númerico ascendente, corresponden a todas las cartas de la misma pinta exceptuando las cartas Joker.
+
+Jack (J) - Corresponde a la primera carta proveniente después de la carta número diez.
+
+Queen (Q) - Corresponde a la segunda carta proveniente después de la carta número diez.
+
+Kaiser (K) - Corresponde a la tercera carta proveniente después de la carta número diez.
+
+Joker - Es una carta comodín la cual puede adquirir cualquier valor númerico según el jugador estipule. Además, si el juego es en base a puntaje, esta carta tiene más puntaje. Para más información leer reglas del juego estipuladas en el presente documento.
+\section{Sistema propuesto.}\label{cap:sistema}
+\subsection{Panorama.}\label{cap:panorama}
+El sistema permite al usuario realizar las operaciones básicas del juego de una forma eficaz y libre de errores, las cuales consisten en acciones relacionadas al retirar carta de la baraja, bajar mano, entre otras relacionadas. El sistema se deberá se desarrollar en Python 3 por lo que contará con una interfaz en base a linea de comandos. Contará con una base de datos interna que logrará que los datos estén de manera persistente en el sistema, independientemente si la energia del hardware deja de ser suministrada o no.
+\subsection{Requerimientos Funcionales.}\label{cap:requerimientos-funcionales}
+Las Cariocas son un juego de cartas en el cual consiste en reunir un determinado patrón de cartas basado en su valor númerico o en sus pintas. Para el inicio del juego es menester disponer de una baraja de cartas y una cantidad de 1 a 6 jugadores que deben ser ingresados en el sistema almacenados en una estructura de datos interna la cual se utilizará para una correcta resolución de las rondas del juego. 
+
+A cada jugador se le debe brindar 12 cartas aleatoriamente las que deberá analizar durante su turno. Los turnos de los jugadores inician cuando el jugador en cuestión retira una carta de la baraja y son finalizados cuando este descarta una carta elegida por el mismo, de su mano actual.
+
+Al lograr reunir el patrón de cartas exigidos por la ronda, el jugador requiere lograr bajar ese determinado patrón, puede ser un Trio, una Escala o una Escala Real, el termino bajar consiste en poner los patrones solicitados con el dorso de las cartas boca abajo para que las pintas puedan ser vistas por otros jugadores.
+
+Cuando un jugador realiza la acción anterior, si los otros jugadores han realizado el mismo procedimiento, ellos pueden botar una carta que correspondiente al patrón exigido por la ronda.
+
+Cabe destacar que cuando se baja un jugador, este no podrá botar cartas en el mismo turno, por lo que si el jugador no logra bajar en su turno, deberá esperar a que los otros jugadores hayan realizado su acción para poder bajar.
+
+Las rondas estan definidas por el patrón que se necesita a medida que avanza el juego. El patrón es de carácter progresivo y la cantidad de rondas oficiales son 9.
+
+El jugador, si lo desea, puede abandonar el juego al terminar la ronda.
+\subsection{Requerimientos No Funcionales.}\label{cap:requerimientos-no-funcionales}
+El juego de cariocas debe mantener una persistencia de datos, la cual está administrada por la memoria RAM y sufre las mismas limitaciones de esta (por ejemplo,almacenamiento limite definido por el hardware, al apagar el equipo se pierde la información).  El tiempo de respuesta esta definido por el lenguaje en el cual se desarrollará el sistema.
+
+\subsection{Seudorrequerimientos.}\label{cap:seudorrequerimientos}
+El software debe estar desarrollado únicamente en Python 3 por solicitud del cliente.
+\subsection{Modelos del sistema.}\label{cap:modelos-sistema}
+
+\subsubsection{Escenarios.}\label{cap:escenarios}
+
+Nombre del caso de Uso: Recibir mano \\
+\noindent\rule{17cm}{0.4pt}\\
+Actor participant                    Iniciado por: Jugador\\
+\noindent\rule{17cm}{0.4pt}\\
+Condicion Inicial: 1. Debe ser la primera ronda del juego\\
+\\
+Flujo de Eventos:   2. El jugador recibe 12 cartas aleatoriamente\\
+                    
+\noindent\rule{17cm}{0.4pt}\\
+Condicion de Salida: 3. Se muestra en pantalla las cartas recibidas\\
+
+\noindent\rule{17cm}{0.4pt}
+Requerimientos especiales:
+
+\subsection{Modelos de casos de uso.}\label{cap:modelos-casos-uso}
+asdasd
+
+\begin{itemize}
+    \item \url{https://www.javatpoint.com/program-to-sort-the-elements-of-the-doubly-linked-list}
+\end{itemize}
+
+
+%%%%%%% Bibliografía %%%%%%%%
+%\bibliographystyle{bst/IEEEtran.bst} 
+%\addcontentsline{toc}{section}{Referencias}  
+%\bibliography{bib/IEEEabrv,bib/IEEEreferencias.bib} 
+%%%%%%% Bibliografía %%%%%%%%    
+
+%\appendix  
+%\clearpage % o \cleardoublepage
+%%\addappheadtotoc 
+%\appendixpage 
+
+%\section{Anexos 1.}
+
+%\section{Anexos 2.}
+
+\end{document}
