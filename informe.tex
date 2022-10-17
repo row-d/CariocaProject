@@ -192,7 +192,7 @@ Lucas Ayala Casanova}
     \end{minipage}
     \vspace*{1cm}
     %\begin{flushleft}
-
+    
     %\end{flushleft}
     %%%
     %%        \flushleft{\textbf{\Large Ing. Mecatrónica} }\\                                                                     %%%
@@ -271,24 +271,109 @@ El juego de cariocas debe mantener una persistencia de datos, la cual está admi
 El software debe estar desarrollado únicamente en Python 3 por solicitud del cliente.
 \subsection{Modelos del sistema.}\label{cap:modelos-sistema}
 
-\subsubsection{Escenarios.}\label{cap:escenarios}
+\subsection{Escenarios.}\label{cap:escenarios}
 
-Nombre del caso de Uso: Recibir mano \\
-\noindent\rule{17cm}{0.4pt}\\
-Actor participant                    Iniciado por: Jugador\\
-\noindent\rule{17cm}{0.4pt}\\
-Condicion Inicial: 1. Debe ser la primera ronda del juego\\
-\\
-Flujo de Eventos:   2. El jugador recibe 12 cartas aleatoriamente\\
-                    
-\noindent\rule{17cm}{0.4pt}\\
-Condicion de Salida: 3. Se muestra en pantalla las cartas recibidas\\
-
-\noindent\rule{17cm}{0.4pt}
-Requerimientos especiales:
-
+%Escenario
+\begin{center}
+    \begin{tabular}{ l | c  }
+        Nombre del escenario:                 & Recibir mano     \\
+        Instancia para actores participantes: & Jugador: Usuario \\\hline
+        Flujo de eventos:                     &                  \\\hline
+    \end{tabular}
+\end{center}
 \subsection{Modelos de casos de uso.}\label{cap:modelos-casos-uso}
-asdasd
+%CASO DE USO 1
+\begin{center}
+    \begin{tabular}{ l | c  }
+        
+        Nombre del caso de Uso: & Recibir mano                                    \\
+        Actor participante:     & Iniciado por: Jugador                           \\\hline
+        Condicion Inicial:      & 1. Debe ser la primera ronda                    \\
+        Flujo de eventos:       & 2. El jugador recibe 12 cartas aleatoriamente   \\\hline
+        Condicion de Salida:    & 3. Se muestra en pantalla el turno del jugador  \\
+                                & 4. Se muestra en pantalla el Total de Cartas: N \\
+                                & 5. Se muestra en pantalla Cartas en la mesa     \\
+                                & 6. Se muestra en pantalla Cartas en descartes   \\
+                                & 7. Se muestra en pantalla Cartas en la mano     \\
+                                & 8. Se muestra en pantalla un menu de opciones   \\ 
+    \end{tabular} \\
+\end{center}
+%FIN CASO DE USO 1
+%CASO DE USO 2
+\begin{center}
+    \begin{tabular}{ l | c  }
+        
+        Nombre del caso de Uso: & Retirar carta de la baraja                      \\
+        Actor participante:     & Iniciado por: Jugador                           \\\hline
+        Condicion Inicial:      & 1. Debe ser el turno del jugador                \\
+        Flujo de eventos:       & 2. El jugador retira una carta de la baraja     \\\hline
+        Condicion de Salida:    & 3. Se muestra en pantalla la carta retirada     \\
+                                & 4. Se muestra en pantalla el turno del jugador  \\
+                                & 5. Se muestra en pantalla el Total de Cartas: N \\
+                                & 6. Se muestra en pantalla Cartas en la mesa     \\
+                                & 7. Se muestra en pantalla Cartas en descartes   \\
+                                & 8. Se muestra en pantalla Cartas en la mano     \\
+                                & 9. Se muestra en pantalla un menu de opciones   \\ 
+    \end{tabular} \\
+\end{center}
+%FIN CASO DE USO 2
+%CASO DE USO  3
+\begin{center}
+    \begin{tabular}{ l | c  }
+        
+        Nombre del caso de Uso: & Descartar carta de la mano                      \\
+        Actor participante:     & Iniciado por: Jugador                           \\\hline
+        Condicion Inicial:      & 1. Debe ser el turno del jugador                \\
+        Flujo de eventos:       & 2. El jugador descarta una carta de su mano     \\\hline
+        Condicion de Salida:    & 3. Se muestra en pantalla la carta descartada   \\
+                                & 4. Se muestra en pantalla el turno del jugador  \\
+                                & 5. Se muestra en pantalla el Total de Cartas: N \\
+                                & 6. Se muestra en pantalla Cartas en la mesa     \\
+                                & 7. Se muestra en pantalla Cartas en descartes   \\
+                                & 8. Se muestra en pantalla Cartas en la mano     \\
+                                & 9. Se muestra en pantalla un menu de opciones   \\ 
+    \end{tabular} \\
+\end{center}
+%FIN CASO DE USO 3
+%CASO DE USO 4
+\begin{center}
+    \begin{tabular}{ l | c  }
+        
+        Nombre del caso de Uso: & Bajar patrón                                    \\
+        Actor participante:     & Iniciado por: Jugador                           \\\hline
+        Condicion Inicial:      & 1. Debe ser el turno del jugador                \\
+        Flujo de eventos:       & 2. El jugador baja un patrón                    \\\hline
+        Condicion de Salida:    & 3. Se muestra en pantalla el patrón bajado      \\
+                                & 4. Se muestra en pantalla el turno del jugador  \\
+                                & 5. Se muestra en pantalla el Total de Cartas: N \\
+                                & 6. Se muestra en pantalla Cartas en la mesa     \\
+                                & 7. Se muestra en pantalla Cartas en descartes   \\
+                                & 8. Se muestra en pantalla Cartas en la mano     \\
+                                & 9. Se muestra en pantalla un menu de opciones   \\ 
+    \end{tabular} \\
+\end{center}
+%FIN CASO DE USO 4
+%CASO DE USO 5 Retirar carta del descarte
+\begin{center}
+    \begin{tabular}{ l | c  }
+        
+        Nombre del caso de Uso: & Retirar carta del descarte                      \\
+        Actor participante:     & Iniciado por: Jugador                           \\\hline
+        Condicion Inicial:      & 1. Debe ser el turno del jugador                \\
+        Flujo de eventos:       & 2. El jugador retira una carta del descarte     \\\hline
+        Condicion de Salida:    & 3. Se muestra en pantalla la carta retirada     \\
+                                & 4. Se muestra en pantalla el turno del jugador  \\
+                                & 5. Se muestra en pantalla el Total de Cartas: N \\
+                                & 6. Se muestra en pantalla Cartas en la mesa     \\
+                                & 7. Se muestra en pantalla Cartas en descartes   \\
+                                & 8. Se muestra en pantalla Cartas en la mano     \\
+                                & 9. Se muestra en pantalla un menu de opciones   \\ 
+    \end{tabular} \\
+\end{center}
+
+\subsection{Modelo de objetos}\label{cap:modelo-objetos}
+
+\section{Glosario}\label{cap:glosario}  
 
 \begin{itemize}
     \item \url{https://www.javatpoint.com/program-to-sort-the-elements-of-the-doubly-linked-list}
