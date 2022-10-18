@@ -48,31 +48,6 @@ sorting=ynt
     \end{center}
     }
 
-\usepackage{glossaries}
-
-\makeglossaries
-    
-    
-
-\newglossaryentry{patrón}
-{
-    name=patrón,
-    description={Conjunto de cartas que se deben completar.}
-}
-\newglossaryentry{baraja}
-{
-    name=baraja,
-    description={Conjunto de cartas que se utilizan en el juego.}
-}
-\newglossaryentry{descarte}
-{
-    name=descarte,
-    description={Conjunto de cartas que se han retirado de la baraja.}
-}
-\newglossaryentry{mano}{
-    name=mano,
-    description={Conjunto de cartas que se tienen en la mano.}
-}
 
 %Comandos  definidos para la plantilla
 \newcommand{\university}{Universidad Católica de la Santísima Concepción}
@@ -250,27 +225,27 @@ Queen (Q) - Corresponde a la segunda carta proveniente después de la carta núm
 Kaiser (K) - Corresponde a la tercera carta proveniente después de la carta número diez.
 
 Joker - Es una carta comodín la cual puede adquirir cualquier valor númerico según el jugador estipule. Además, si el juego es en base a puntaje, esta carta tiene más puntaje. Para más información leer reglas del juego estipuladas en el presente documento.
-\subsection*{Referencias}
+\subsection{Referencias}
 \begin{itemize}
     \item Las referencias utilizadas en este informe provienen de \textit{Ingeniería de software orientado a objetos. Bruegge,Bernd y Dutoit,Allen H.} \cite{oop}
 \end{itemize}
 \section{Sistema Actual.}\label{cap:sistemaActual}
-En la actualidad no existe un sistema que permita jugar Cariocas de manera digital. Por lo tanto, el sistema que se propone es el primero en su tipo.
+En la actualidad no existe un sistema que permita jugar Cariocas de manera digital. Por lo tanto, de considerarse un sistema actual lo más cercano sería el juego de cariocas físico, el cual es, en efecto, quien define las reglas del juego.
 \section{Sistema propuesto.}\label{cap:sistema}
 \subsection{Panorama.}\label{cap:panorama}
-El sistema permite al usuario realizar las operaciones básicas del juego de una forma eficaz y libre de errores, las cuales consisten en acciones relacionadas al retirar carta de la \gls{baraja}, bajar mano, entre otras relacionadas. El sistema se deberá se desarrollar en Python 3 por lo que contará con una interfaz en base a linea de comandos. Contará con una base de datos interna que logrará que los datos estén de manera persistente en el sistema, independientemente si la energia del hardware deja de ser suministrada o no.
+El sistema permite al usuario realizar las operaciones básicas del juego de una forma eficaz y libre de errores, las cuales consisten en acciones relacionadas al retirar carta de la baraja, bajar mano, entre otras relacionadas. El sistema se deberá se desarrollar en Python 3 por lo que contará con una interfaz en base a linea de comandos. Contará con una base de datos interna que logrará que los datos estén de manera persistente en el sistema, independientemente si la energia del hardware deja de ser suministrada o no.
 \subsection{Requerimientos Funcionales.}\label{cap:requerimientos-funcionales}
-Las Cariocas son un juego de cartas en el cual consiste en reunir un determinado \gls{patrón} de cartas basado en su valor númerico o en sus pintas. Para el inicio del juego es menester disponer de una \gls{baraja} de cartas y una cantidad de 1 a 6 jugadores que deben ser ingresados en el sistema almacenados en una estructura de datos interna la cual se utilizará para una correcta resolución de las rondas del juego. 
+Las Cariocas son un juego de cartas en el cual consiste en reunir un determinado patrón de cartas basado en su valor númerico o en sus pintas. Para el inicio del juego es menester disponer de una baraja de cartas y una cantidad de 1 a 6 jugadores que deben ser ingresados en el sistema almacenados en una estructura de datos interna la cual se utilizará para una correcta resolución de las rondas del juego. 
 
-A cada jugador se le debe brindar 12 cartas aleatoriamente las que deberá analizar durante su turno. Los turnos de los jugadores inician cuando el jugador en cuestión retira una carta de la \gls{baraja} y son finalizados cuando este descarta una carta elegida por el mismo, de su mano actual.
+A cada jugador se le debe brindar 12 cartas aleatoriamente las que deberá analizar durante su turno. Los turnos de los jugadores inician cuando el jugador en cuestión retira una carta de la baraja y son finalizados cuando este descarta una carta elegida por el mismo, de su mano actual.
 
-Al lograr reunir el patrón\Gls{patrón} de cartas exigidos por la ronda, el jugador requiere lograr bajar ese determinado \gls{patrón}, puede ser un Trio, una Escala o una Escala Real, el termino bajar consiste en poner los patrones solicitados con el dorso de las cartas boca abajo para que las pintas puedan ser vistas por otros jugadores.
+Al lograr reunir el patrón de cartas exigidos por la ronda, el jugador requiere lograr bajar ese determinado patrón, puede ser un Trio, una Escala o una Escala Real, el termino bajar consiste en poner los patrones solicitados con el dorso de las cartas boca abajo para que las pintas puedan ser vistas por otros jugadores.
 
-Cuando un jugador realiza la acción anterior, si los otros jugadores han realizado el mismo procedimiento, ellos pueden botar una carta que correspondiente al \gls{patrón} exigido por la ronda.
+Cuando un jugador realiza la acción anterior, si los otros jugadores han realizado el mismo procedimiento, ellos pueden botar una carta que correspondiente al patrón exigido por la ronda.
 
 Cabe destacar que cuando se baja un jugador, este no podrá botar cartas en el mismo turno, por lo que si el jugador no logra bajar en su turno, deberá esperar a que los otros jugadores hayan realizado su acción para poder bajar.
 
-Las rondas estan definidas por el patrón que se necesita a medida que avanza el juego. El \gls{patrón} es de carácter progresivo y la cantidad de rondas oficiales son 9.
+Las rondas estan definidas por el patrón que se necesita a medida que avanza el juego. El patrón es de carácter progresivo y la cantidad de rondas oficiales son 9.
 
 El jugador, si lo desea, puede abandonar el juego al terminar la ronda.
 \subsection{Requerimientos No Funcionales.}\label{cap:requerimientos-no-funcionales}
@@ -288,10 +263,10 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
         Nombre del escenario: & Realización Típica de Turnos \\
         Instancia actores participantes: & Jugador: Usuario \\\hline
         Flujo de eventos: &  1.-Cada jugador recibe 12 cartas\\
-        & 2.-El jugador retira una carta de la \gls{baraja}\\   
+        & 2.-El jugador retira una carta de la   baraja\\   
         & 3.-El jugador analiza su mano y descarta una carta\\  
         & 4.-Se procede al siguiente turno iterando nuevamente la secuencia\\
-        & 5.-Si alguno completa el \gls{patrón} solicitado por la ronda,\\
+        & 5.-Si alguno completa el   patrón solicitado por la ronda,\\
         & entonces baja su mano\\
         & 6.-Si el jugador baja su mano, entonces no podrá botar \\
         & cartas en el mismo turno\\
@@ -319,7 +294,7 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
         Condicion de Salida: & 3. Se muestra en pantalla el turno del jugador \\
         & 4. Se muestra en pantalla el Total de Cartas: N \\
         & 5. Se muestra en pantalla Cartas en la mesa \\
-        & 6. Se muestra en pantalla Cartas en descartes\gls{Descarte} \\
+        & 6. Se muestra en pantalla Cartas en descartes \\
         & 7. Se muestra en pantalla Cartas en la mano \\
         & 8. Se muestra en pantalla un menu de opciones \\ 
     \end{tabular} \\
@@ -328,10 +303,10 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
 %CASO DE USO 2
 \begin{center}
     \begin{tabular}{ l | c  }
-        Nombre del caso de Uso: & Retirar carta de la \gls{baraja} \\
+        Nombre del caso de Uso: & Retirar carta de la baraja \\
         Actor participante: & Iniciado por: Jugador \\\hline
         Condicion Inicial: & 1. Debe ser el turno del jugador    \\
-        Flujo de eventos: & 2. El jugador retira una carta de la \gls{baraja} \\\hline
+        Flujo de eventos: & 2. El jugador retira una carta de la baraja \\\hline
         Condicion de Salida: & 3. Se muestra en pantalla la carta retirada \\
         & 4. Se muestra en pantalla el turno del jugador \\
         & 5. Se muestra en pantalla el Total de Cartas: N \\
@@ -347,7 +322,7 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
     \begin{tabular}{ l | c  }
         Nombre del caso de Uso: & Descartar carta de la mano \\
         Actor participante: & Iniciado por: Jugador \\\hline
-        Condicion Inicial: & 1. Debe ser el turno del jugador    \\
+        Condicion Inicial: & 1. Debe ser el turno del jugador\\
         Flujo de eventos: & 2. El jugador descarta una carta de su mano \\\hline
         Condicion de Salida: & 3. Se muestra en pantalla la carta descartada \\
         & 4. Se muestra en pantalla el turno del jugador \\
@@ -362,11 +337,11 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
 %CASO DE USO 4
 \begin{center}
     \begin{tabular}{ l | c  }
-        Nombre del caso de Uso: & Bajar \Gls{patrón} \\
+        Nombre del caso de Uso: & Bajar patrón \\
         Actor participante: & Iniciado por: Jugador \\\hline
         Condicion Inicial: & 1. Debe ser el turno del jugador    \\
-        Flujo de eventos: & 2. El jugador baja un \gls{patrón} \\\hline
-        Condicion de Salida: & 3. Se muestra en pantalla el \gls{patrón} bajado \\
+        Flujo de eventos: & 2. El jugador baja un patrón \\\hline
+        Condicion de Salida: & 3. Se muestra en pantalla el patrón bajado \\
         & 4. Se muestra en pantalla el turno del jugador \\
         & 5. Se muestra en pantalla el Total de Cartas: N \\
         & 6. Se muestra en pantalla Cartas en la mesa \\
@@ -393,14 +368,7 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 5
-\clearpage
-\subsubsection{Modelo de objetos}\label{cap:modelo-objetos}
-A continuación se presenta el modelo de objetos del sistema a programar para el desarrollo del juego de cartas Cariocas:
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=15cm]{moobjetos.png}
-    \caption{Modelo de objetos para el juego de cartas Cariocas.}
-\end{figure}
+
 
 \subsubsection{Diccionario de datos}\label{cap:diccionario-datos}
 \begin{itemize}
@@ -420,22 +388,14 @@ A continuación se presenta el diagrama de clases del sistema a programar para e
     \includegraphics[width=15cm]{diclass.png}
     \caption{Diagrama de clases para el juego de cartas Cariocas.}
 \end{figure}
-\subsubsection{Interfaz de usuario}\label{cap:interfaz-usuario}
-El siguiente diagrama muestra la interfaz de usuario del juego detallando así rutas de navegación y también maquetas de pantallas que tendrá el juego.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=15cm]{interfaz.png}
-    \caption{Diagrama de interfaz de usuario para el juego de cartas Cariocas.}
-\end{figure}
+
 \clearpage
 \section{Glosario}\label{cap:glosario}
 \begin{itemize}
-    \item \textbf{Patrón}: Conjunto de cartas que se deben completar.
-    \item \textbf{Baraja}: Conjunto de cartas que se utilizan durante el juego.
+    \item \textbf patrón: Conjunto de cartas que se deben completar.
+    \item \textbf baraja: Conjunto de cartas que se utilizan durante el juego.
     \item \textbf{Descarte}: Conjunto de cartas que se han descartado durante el juego.
 \end{itemize}
-
-\printglossary
 \clearpage
 
 \medskip
