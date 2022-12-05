@@ -1,32 +1,22 @@
 \documentclass[60pt]{article}
 
 \title{Informe}
-%%------------ Paquetes utilizados
-\usepackage[utf8]{inputenc} %Indica qué codificación se está usando ISO-8859-1(latin1)  o utf8  
-\usepackage[spanish]{babel}%Indica que escribiermos en español
-%\usepackage{amsmath} % Comandos extras para matemáticas (cajas para ecuaciones,
-% etc)
-%\usepackage{amssymb} % Simbolos matematicos (por lo tanto)
-\usepackage{graphicx} % Incluir imágenes en LaTeX
-\usepackage{color} % Para colorear texto
-%\usepackage{subfigure} % subfiguras
-\usepackage{float} %Podemos usar el especificador [H] en las figuras para que se
-% queden donde queramos
-\usepackage{algorithm,algpseudocode}%para crear algoritmos
-\usepackage{capt-of} % Permite usar etiquetas fuera de elementos flotantes
-% (etiquetas de figuras)
-\usepackage{sidecap} % Para poner el texto de las imágenes al lado
-    \sidecaptionvpos{figure}{c} % Para que el texto se alinie al centro vertical
-\usepackage{caption} % Para poder quitar numeracion de figuras
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx} 
+\usepackage{color}
+\usepackage{float} 
+\usepackage{algorithm,algpseudocode}
+\usepackage{capt-of}
+\usepackage{sidecap} 
+    \sidecaptionvpos{figure}{c} 
+\usepackage{caption} 
 \usepackage{subcaption}
-%\usepackage{commath} % funcionalidades extras para diferenciales, integrales,
-% etc (\od, \dif, etc)
-%\usepackage{cancel} % para cancelar expresiones (\cancelto{0}{x})
-\usepackage{anysize}                    % Para personalizar el ancho de  los márgenes
-\marginsize{2cm}{2cm}{2cm}{2cm} % Izquierda, derecha, arriba, abajo
+\usepackage{anysize}
+\marginsize{2cm}{2cm}{2cm}{2cm}
 \usepackage{appendix}
-\usepackage{fancyhdr} %Personalizar encabezado y pie de página
-\usepackage{listingsutf8} % Para usar código fuente
+\usepackage{fancyhdr}
+\usepackage{listingsutf8}
 \usepackage{parcolumns}
 \usepackage{blindtext}
 \usepackage{float}
@@ -62,14 +52,13 @@ David Gómez Pinto
 
 Lucas Ayala Casanova}
 \newcommand{\teacher}{Diego Maldonado Montiel}
-\newcommand{\Date}{17 de octubre de 2022}%Aquí ingrese la fecha de entrega (\today inserta la fecha actual)
-\renewcommand{\lstlistingname}{Fragmento}% Listing -> Fragmento
-\floatname{algorithm}{Algoritmo}%algorithm->Algotimo
+\newcommand{\Date}{17 de octubre de 2022}
+\renewcommand{\lstlistingname}{Fragmento}
+\floatname{algorithm}{Algoritmo}
 %%------------ Configuraciones específicas de paquetes
 
 %%-------- Color y Referencias
-% Para que las referencias sean hipervínculos a las figuras o ecuaciones y
-% aparezcan en color
+
 \usepackage[colorlinks=false,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
 %\usepackage{hyperref} 
 
@@ -86,21 +75,19 @@ Lucas Ayala Casanova}
 %%-- Páginas
 \fancypagestyle{mypagestyle}{%
 	\fancyhf{}
-	\fancyhead[L]{\footnotesize \universityshort} %encabezado izquierda
-	\fancyhead[R]{\footnotesize \faculty}   % dereecha
-	\fancyfoot[L]{\footnotesize \depto}  % Pie izquierda
-	\fancyfoot[R]{\footnotesize \class}  % Pie derecha
-	\fancyfoot[C]{\thepage}  % centro%\fancyfoot[L]{\footnotesize Estándares de desarrollo}  %izquierda
+	\fancyhead[L]{\footnotesize \universityshort} 
+	\fancyhead[R]{\footnotesize \faculty}  
+	\fancyfoot[L]{\footnotesize \depto}
+	\fancyfoot[R]{\footnotesize \class}
+	\fancyfoot[C]{\thepage}
 	\renewcommand{\footrulewidth}{0.4pt}
 }
 
 
 %%-------- Personalizar código fuente
 
-\definecolor{dkgreen}{rgb}{0,0.6,0} % Definimos colores para usar en el código
+\definecolor{dkgreen}{rgb}{0,0.6,0} 
 \definecolor{gray}{rgb}{0.5,0.5,0.5} 
-% configuración para el lenguaje que queramos utilizar
-
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -134,49 +121,45 @@ Lucas Ayala Casanova}
 \begin{document}
 \thispagestyle{mytitlepagestyle}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\thispagestyle{mytitlepagestyle}													%%%
-\noindent	                                                                        %%%
-\begin{center}                                                                      %%%
-    %%%
-    \vspace*{0.8cm}																		%%%
-    %%%
-    \begin{minipage}{0.9\textwidth} 													%%%
-        \begin{center}																	%%%
-            \textsc{\huge \uppercase{\depto}}\\[0.5cm]  						%%%
-            \textsc{\Large \class}\\[1.5cm] 								%%%
-        \end{center}																	%%%
-    \end{minipage}\\[0.5cm]																%%%
-    %%%
-    \vspace*{\fill}																		%%%
-    %%%                       
-    %%{ \Large  \preTitle}\\[0.2cm]															%%%
-    { \Huge \bfseries \Title}\\[0.4cm]										%%%
-    %%%
-    \vspace*{\fill}																		%%%
-    %%%
-    \begin{minipage}{0.46\textwidth}                                                    %%%
-        \begin{flushleft} \large                                                            %%%
-            \emph{Autor:}\\   																	%%%
-            \Author\\																	%%%
-            %%%
-        \end{flushleft}                                                                     %%%
+\thispagestyle{mytitlepagestyle}
+\noindent	                                                                        
+\begin{center}                                                                      
+
+    \vspace*{0.8cm}
+    
+    \begin{minipage}{0.9\textwidth}
+        \begin{center}																	
+            \textsc{\huge \uppercase{\depto}}\\[0.5cm]  						
+            \textsc{\Large \class}\\[1.5cm] 								
+        \end{center}
+    \end{minipage}\\[0.5cm]																
+    
+    \vspace*{\fill}
+    
+    
+    { \Huge \bfseries \Title}\\[0.4cm]										
+    
+    \vspace*{\fill}
+    
+    \begin{minipage}{0.46\textwidth}
+        \begin{flushleft} \large
+            \emph{Autor:}\\   																	
+            \Author\\																	
+            
+        \end{flushleft}
     \end{minipage}
-    %%%
+    
     \begin{minipage}{0.52\textwidth}
-        \vspace{-0.6cm}                                         %%%
-        \begin{flushright} \large                                                           %%%
-            \emph{Profesor:} \\                                                                 %%%
-            \teacher\\                                                   %%%
-        \end{flushright}                                                                    %%%
+        \vspace{-0.6cm}
+        \begin{flushright} \large
+            \emph{Profesor:} \\                                                                 
+            \teacher\\                                                   
+        \end{flushright}
     \end{minipage}
     \vspace*{1cm}
-    %\begin{flushleft}
-    %\end{flushleft}
-    %%%
-    %%        \flushleft{\textbf{\Large Ing. Mecatrónica} }\\                                                                     %%%
     \vspace*{\fill}
     \begin{center}
-        {\large \Date}                                                                 %%%
+        {\large \Date}
     \end{center}
 \end{center}
 
@@ -260,24 +243,24 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
 %Escenario
 \begin{center}
     \begin{tabular}{ l | c  }
-        Nombre del escenario: & Realización Típica de Turnos \\
-        Instancia actores participantes: & Jugador: Usuario \\\hline
-        Flujo de eventos: &  1.-Cada jugador recibe 12 cartas\\
-        & 2.-El jugador retira una carta de la   baraja\\   
-        & 3.-El jugador analiza su mano y descarta una carta\\  
-        & 4.-Se procede al siguiente turno iterando nuevamente la secuencia\\
-        & 5.-Si alguno completa el   patrón solicitado por la ronda,\\
-        & entonces baja su mano\\
-        & 6.-Si el jugador baja su mano, entonces no podrá botar \\
-        & cartas en el mismo turno\\
-        & 7.-Cuando le toque nuevamente su turno, el jugador podrá botar cartas\\
-        & 8.-La ronda termina cuando un jugador tiene una sola carta\\
-        & y este finaliza su turno al descartar su última carta\\
-        & 9.-El juego termina cuando se han completado las 9 rondas oficiales\\
+        Nombre del escenario:            & Realización Típica de Turnos                                          \\
+        Instancia actores participantes: & Jugador: Usuario                                                      \\\hline
+        Flujo de eventos:                & 1.-Cada jugador recibe 12 cartas                                      \\
+                                         & 2.-El jugador retira una carta de la   baraja                         \\   
+                                         & 3.-El jugador analiza su mano y descarta una carta                    \\  
+                                         & 4.-Se procede al siguiente turno iterando nuevamente la secuencia     \\
+                                         & 5.-Si alguno completa el   patrón solicitado por la ronda,            \\
+                                         & entonces baja su mano                                                 \\
+                                         & 6.-Si el jugador baja su mano, entonces no podrá botar                \\
+                                         & cartas en el mismo turno                                              \\
+                                         & 7.-Cuando le toque nuevamente su turno, el jugador podrá botar cartas \\
+                                         & 8.-La ronda termina cuando un jugador tiene una sola carta            \\
+                                         & y este finaliza su turno al descartar su última carta                 \\
+                                         & 9.-El juego termina cuando se han completado las 9 rondas oficiales   \\
         \hline
     \end{tabular}
 \end{center}
-\subsubsection{Modelos de casos de uso.}\label{cap:modelos-casos-uso} 
+\subsubsection{Modelos de casos de uso.}\label{cap:modelos-casos-uso}
 \clearpage
 \begin{figure}[h]
     \centering
@@ -287,84 +270,84 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
 %CASO DE USO 1
 \begin{center}
     \begin{tabular}{ l | c  }
-        Nombre del caso de Uso: & Recibir mano \\
-        Actor participante: & Iniciado por: Jugador \\\hline
-        Condicion Inicial: & 1. Debe ser la primera ronda    \\
-        Flujo de eventos: & 2. El jugador recibe 12 cartas aleatoriamente \\\hline
-        Condicion de Salida: & 3. Se muestra en pantalla el turno del jugador \\
-        & 4. Se muestra en pantalla el Total de Cartas: N \\
-        & 5. Se muestra en pantalla Cartas en la mesa \\
-        & 6. Se muestra en pantalla Cartas en descartes \\
-        & 7. Se muestra en pantalla Cartas en la mano \\
-        & 8. Se muestra en pantalla un menu de opciones \\ 
+        Nombre del caso de Uso: & Recibir mano                                    \\
+        Actor participante:     & Iniciado por: Jugador                           \\\hline
+        Condicion Inicial:      & 1. Debe ser la primera ronda                    \\
+        Flujo de eventos:       & 2. El jugador recibe 12 cartas aleatoriamente   \\\hline
+        Condicion de Salida:    & 3. Se muestra en pantalla el turno del jugador  \\
+                                & 4. Se muestra en pantalla el Total de Cartas: N \\
+                                & 5. Se muestra en pantalla Cartas en la mesa     \\
+                                & 6. Se muestra en pantalla Cartas en descartes   \\
+                                & 7. Se muestra en pantalla Cartas en la mano     \\
+                                & 8. Se muestra en pantalla un menu de opciones   \\ 
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 1
 %CASO DE USO 2
 \begin{center}
     \begin{tabular}{ l | c  }
-        Nombre del caso de Uso: & Retirar carta de la baraja \\
-        Actor participante: & Iniciado por: Jugador \\\hline
-        Condicion Inicial: & 1. Debe ser el turno del jugador    \\
-        Flujo de eventos: & 2. El jugador retira una carta de la baraja \\\hline
-        Condicion de Salida: & 3. Se muestra en pantalla la carta retirada \\
-        & 4. Se muestra en pantalla el turno del jugador \\
-        & 5. Se muestra en pantalla el Total de Cartas: N \\
-        & 6. Se muestra en pantalla Cartas en la mesa \\
-        & 7. Se muestra en pantalla Cartas en descartes \\
-        & 8. Se muestra en pantalla Cartas en la mano \\
-        & 9. Se muestra en pantalla un menu de opciones \\ 
+        Nombre del caso de Uso: & Retirar carta de la baraja                      \\
+        Actor participante:     & Iniciado por: Jugador                           \\\hline
+        Condicion Inicial:      & 1. Debe ser el turno del jugador                \\
+        Flujo de eventos:       & 2. El jugador retira una carta de la baraja     \\\hline
+        Condicion de Salida:    & 3. Se muestra en pantalla la carta retirada     \\
+                                & 4. Se muestra en pantalla el turno del jugador  \\
+                                & 5. Se muestra en pantalla el Total de Cartas: N \\
+                                & 6. Se muestra en pantalla Cartas en la mesa     \\
+                                & 7. Se muestra en pantalla Cartas en descartes   \\
+                                & 8. Se muestra en pantalla Cartas en la mano     \\
+                                & 9. Se muestra en pantalla un menu de opciones   \\ 
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 2
 %CASO DE USO  3
 \begin{center}
     \begin{tabular}{ l | c  }
-        Nombre del caso de Uso: & Descartar carta de la mano \\
-        Actor participante: & Iniciado por: Jugador \\\hline
-        Condicion Inicial: & 1. Debe ser el turno del jugador\\
-        Flujo de eventos: & 2. El jugador descarta una carta de su mano \\\hline
-        Condicion de Salida: & 3. Se muestra en pantalla la carta descartada \\
-        & 4. Se muestra en pantalla el turno del jugador \\
-        & 5. Se muestra en pantalla el Total de Cartas: N \\
-        & 6. Se muestra en pantalla Cartas en la mesa \\
-        & 7. Se muestra en pantalla Cartas en descartes \\
-        & 8. Se muestra en pantalla Cartas en la mano \\
-        & 9. Se muestra en pantalla un menu de opciones \\ 
+        Nombre del caso de Uso: & Descartar carta de la mano                      \\
+        Actor participante:     & Iniciado por: Jugador                           \\\hline
+        Condicion Inicial:      & 1. Debe ser el turno del jugador                \\
+        Flujo de eventos:       & 2. El jugador descarta una carta de su mano     \\\hline
+        Condicion de Salida:    & 3. Se muestra en pantalla la carta descartada   \\
+                                & 4. Se muestra en pantalla el turno del jugador  \\
+                                & 5. Se muestra en pantalla el Total de Cartas: N \\
+                                & 6. Se muestra en pantalla Cartas en la mesa     \\
+                                & 7. Se muestra en pantalla Cartas en descartes   \\
+                                & 8. Se muestra en pantalla Cartas en la mano     \\
+                                & 9. Se muestra en pantalla un menu de opciones   \\ 
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 3
 %CASO DE USO 4
 \begin{center}
     \begin{tabular}{ l | c  }
-        Nombre del caso de Uso: & Bajar patrón \\
-        Actor participante: & Iniciado por: Jugador \\\hline
-        Condicion Inicial: & 1. Debe ser el turno del jugador    \\
-        Flujo de eventos: & 2. El jugador baja un patrón \\\hline
-        Condicion de Salida: & 3. Se muestra en pantalla el patrón bajado \\
-        & 4. Se muestra en pantalla el turno del jugador \\
-        & 5. Se muestra en pantalla el Total de Cartas: N \\
-        & 6. Se muestra en pantalla Cartas en la mesa \\
-        & 7. Se muestra en pantalla Cartas en descartes \\
-        & 8. Se muestra en pantalla Cartas en la mano \\
-        & 9. Se muestra en pantalla un menu de opciones \\ 
+        Nombre del caso de Uso: & Bajar patrón                                    \\
+        Actor participante:     & Iniciado por: Jugador                           \\\hline
+        Condicion Inicial:      & 1. Debe ser el turno del jugador                \\
+        Flujo de eventos:       & 2. El jugador baja un patrón                    \\\hline
+        Condicion de Salida:    & 3. Se muestra en pantalla el patrón bajado      \\
+                                & 4. Se muestra en pantalla el turno del jugador  \\
+                                & 5. Se muestra en pantalla el Total de Cartas: N \\
+                                & 6. Se muestra en pantalla Cartas en la mesa     \\
+                                & 7. Se muestra en pantalla Cartas en descartes   \\
+                                & 8. Se muestra en pantalla Cartas en la mano     \\
+                                & 9. Se muestra en pantalla un menu de opciones   \\ 
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 4
 %CASO DE USO 5 Retirar carta del descarte
 \begin{center}
     \begin{tabular}{ l | c  }
-        Nombre del caso de Uso: & Retirar carta del descarte \\
-        Actor participante: & Iniciado por: Jugador \\\hline
-        Condicion Inicial: & 1. Debe ser el turno del jugador    \\
-        Flujo de eventos: & 2. El jugador retira una carta del descarte \\\hline
-        Condicion de Salida: & 3. Se muestra en pantalla la carta retirada \\
-        & 4. Se muestra en pantalla el turno del jugador \\
-        & 5. Se muestra en pantalla el Total de Cartas: N \\
-        & 6. Se muestra en pantalla Cartas en la mesa \\
-        & 7. Se muestra en pantalla Cartas en descartes \\
-        & 8. Se muestra en pantalla Cartas en la mano \\
-        & 9. Se muestra en pantalla un menu de opciones \\ 
+        Nombre del caso de Uso: & Retirar carta del descarte                      \\
+        Actor participante:     & Iniciado por: Jugador                           \\\hline
+        Condicion Inicial:      & 1. Debe ser el turno del jugador                \\
+        Flujo de eventos:       & 2. El jugador retira una carta del descarte     \\\hline
+        Condicion de Salida:    & 3. Se muestra en pantalla la carta retirada     \\
+                                & 4. Se muestra en pantalla el turno del jugador  \\
+                                & 5. Se muestra en pantalla el Total de Cartas: N \\
+                                & 6. Se muestra en pantalla Cartas en la mesa     \\
+                                & 7. Se muestra en pantalla Cartas en descartes   \\
+                                & 8. Se muestra en pantalla Cartas en la mano     \\
+                                & 9. Se muestra en pantalla un menu de opciones   \\ 
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 5
