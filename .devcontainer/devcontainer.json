@@ -2,9 +2,7 @@
 	"name": "Ubuntu",
 	"image": "qmcgaw/latexdevcontainer:latest-full",
 	"remoteUser": "root", // Do not change this
-	"features": {
-		"ghcr.io/devcontainers/features/python:1": {}
-	},
+	"features": {},
 	"customizations": {
 		"vscode": {
 			"settings": {
