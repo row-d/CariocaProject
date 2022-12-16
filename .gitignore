@@ -1,3 +1,6 @@
+PDF
+app/core/**/__pycache__/
+app/lib/**/__pycache__/
 *.log
 *.out
 *.aux
