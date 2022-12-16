@@ -3,29 +3,29 @@
 ## Todo list
 
 - [x] Introduccion
-- [x] Proposito del sistema
-- [x] Alcance del sistema
-- [x] Objetivos y criterios de exito del proyecto
-- [x] Definiciones, siglas y abreviaturas
-- [x] Referencias
+  - [x] Proposito del sistema
+  - [x] Alcance del sistema
+  - [x] Objetivos y criterios de exito del proyecto
+  - [x] Definiciones, siglas y abreviaturas
+  - [x] Referencias
 - [ ] Panorama
 - [ ] Sistema actual
 - [x] Sistema propuesto
-- [ ] Panorama
-- [x] Requerimientos funcionales
-- [x] Requerimientos no funcionales
-- [x] Seudorrequerimientos
-- [ ] Modelos del sistema
-- [x] Escenarios
-- [x] Modelo de caso de uso
-- [ ] Modelo de objetos
-  - [x] Diagrama de clases
-  - [ ] Diagrama de casos de uso
-  - [ ] Diagrama de secuencia
-- [x] Diccionario de datos
-- [x] Diagramas de clase
-- [ ] Modelos dinamicos
-- [x] Interfaz de usuario: rutas de navegacion y maquetas de pantallas
+  - [ ] Panorama
+  - [x] Requerimientos funcionales
+  - [x] Requerimientos no funcionales
+  - [x] Seudorrequerimientos
+  - [ ] Modelos del sistema
+    - [x] Escenarios
+    - [x] Modelo de caso de uso
+    - [ ] Modelo de objetos
+    - [x] Diagrama de clases
+    - [ ] Diagrama de casos de uso
+    - [ ] Diagrama de secuencia
+    - [x] Diccionario de datos
+    - [x] Diagramas de clase
+    - [ ] Modelos dinamicos
+    - [x] Interfaz de usuario: rutas de navegacion y maquetas de pantallas
 - [x] Glosario
 
 ## Todo List - Parte 2
@@ -46,6 +46,19 @@
 - [ ] Presentacion y claridad de la exposicion
 - [ ] Calidad de las respuestas
 - [ ] Tiempo (No mas de 15 minutos)
+
+## Dudas Profesor
+
+- [ ] ¿Es necesario que el codigo tenga clases abstractas (ABC) ?
+
+## Dudas Cliente
+- [ ] ¿Que es lo que le gustaría que se implementara en el juego?
+- [ ] ¿El juego debe tener un tablero?
+- [ ] ¿El juego debe tener un registro?
+- [ ] ¿El juego debe tener un ranking?
+- [ ] ¿El juego debe tener un registro persistente?
+- [ ] ¿Hay alguna caracteristica especial que le gustaría que tuviera el juego?
+- [ ] ¿El juego debe tener un menu de opciones?
 
 ### Menú inicio
 

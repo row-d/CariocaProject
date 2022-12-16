@@ -1,0 +1,22 @@
+\section{Sistema propuesto.}\label{cap:sistema}
+\subsection{Panorama.}\label{cap:panorama}
+El sistema permite al usuario realizar las operaciones básicas del juego de una forma eficaz y libre de errores, las cuales consisten en acciones relacionadas al retirar carta de la baraja, bajar mano, entre otras relacionadas. El sistema se deberá se desarrollar en Python 3 por lo que contará con una interfaz en base a linea de comandos. Contará con una base de datos interna que logrará que los datos estén de manera persistente en el sistema, independientemente si la energia del hardware deja de ser suministrada o no.
+\subsection{Requerimientos Funcionales.}\label{cap:requerimientos-funcionales}
+Las Cariocas son un juego de cartas en el cual consiste en reunir un determinado patrón de cartas basado en su valor númerico o en sus pintas. Para el inicio del juego es menester disponer de una baraja de cartas y una cantidad de 1 a 6 jugadores que deben ser ingresados en el sistema almacenados en una estructura de datos interna la cual se utilizará para una correcta resolución de las rondas del juego. 
+
+A cada jugador se le debe brindar 12 cartas aleatoriamente las que deberá analizar durante su turno. Los turnos de los jugadores inician cuando el jugador en cuestión retira una carta de la baraja y son finalizados cuando este descarta una carta elegida por el mismo, de su mano actual.
+
+Al lograr reunir el patrón de cartas exigidos por la ronda, el jugador requiere lograr bajar ese determinado patrón, puede ser un Trio, una Escala o una Escala Real, el termino bajar consiste en poner los patrones solicitados con el dorso de las cartas boca abajo para que las pintas puedan ser vistas por otros jugadores.
+
+Cuando un jugador realiza la acción anterior, si los otros jugadores han realizado el mismo procedimiento, ellos pueden botar una carta que correspondiente al patrón exigido por la ronda.
+
+Cabe destacar que cuando se baja un jugador, este no podrá botar cartas en el mismo turno, por lo que si el jugador no logra bajar en su turno, deberá esperar a que los otros jugadores hayan realizado su acción para poder bajar.
+
+Las rondas estan definidas por el patrón que se necesita a medida que avanza el juego. El patrón es de carácter progresivo y la cantidad de rondas oficiales son 9.
+
+El jugador, si lo desea, puede abandonar el juego al terminar la ronda.
+\subsection{Requerimientos No Funcionales.}\label{cap:requerimientos-no-funcionales}
+El juego de cariocas debe mantener una persistencia temporal de datos, la cual está administrada por la memoria RAM y sufre las mismas limitaciones de esta (por ejemplo,almacenamiento limite definido por el hardware, al apagar el equipo se pierde la información).  El tiempo de respuesta esta definido por el lenguaje en el cual se desarrollará el sistema.
+
+\subsection{Seudorrequerimientos.}\label{cap:seudorrequerimientos}
+El software debe estar desarrollado únicamente en Python 3 por solicitud del cliente, además toda documentación debe estar escrita en LaTeX.
