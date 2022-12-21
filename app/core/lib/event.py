@@ -24,12 +24,15 @@ class EventEmitter:
 
     def once(self, event, listener):
         def onetime(*args, **kwargs):
-            self.remove(event, onetime)
+            self.removeEvent(event, onetime)
             listener(*args, **kwargs)
         self.on(event, onetime)
 
-    def remove(self, event, listener):
+    def removeEvent(self, event, listener):
         self._listeners.get(event, []).remove(listener)
 
-    def removeAll(self, event):
-        self._listeners[event] = []
+    def removeAllEvents(self, event):
+        if event:
+            self._listeners[event] = []
+        else:
+            self._listeners = {}
