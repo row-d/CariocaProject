@@ -1,4 +1,8 @@
-class Juego:
+from core.lib.event import EventEmitter
+from abc import ABCMeta
+
+
+class Juego(EventEmitter, metaclass=ABCMeta):
     def __init__(self) -> None:
         pass
 

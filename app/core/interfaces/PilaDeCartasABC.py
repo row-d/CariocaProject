@@ -1,4 +1,8 @@
-class PilaDeCartas:
+from abc import ABCMeta
+from core.lib.event import EventEmitter
+
+
+class PilaDeCartasABC(EventEmitter, metaclass=ABCMeta):
     def __init__(self) -> None:
         pass
 

@@ -1,4 +1,5 @@
-""" Event emitter class
+class EventEmitter:
+    """ Event emitter class
     Description: Esta clase permite emitir eventos y escucharlos. Util para la comunicacion entre modulos.
     Usage:
         from event import EventEmitter
@@ -9,10 +10,8 @@
                 self.emit('myEvent', 'Hello World')
         myClass = MyClass()
         myClass.on('myEvent', lambda msg: print(msg))
-"""
+    """
 
-
-class EventEmitter:
     def __init__(self):
         self._listeners = {}
 
