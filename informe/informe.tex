@@ -122,38 +122,38 @@ Lucas Ayala Casanova}
 \thispagestyle{mytitlepagestyle}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \thispagestyle{mytitlepagestyle}
-\noindent	                                                                        
-\begin{center}                                                                      
+\noindent
+\begin{center}
 
     \vspace*{0.8cm}
-    
+
     \begin{minipage}{0.9\textwidth}
-        \begin{center}																	
-            \textsc{\huge \uppercase{\depto}}\\[0.5cm]  						
-            \textsc{\Large \class}\\[1.5cm] 								
+        \begin{center}
+            \textsc{\huge \uppercase{\depto}}\\[0.5cm]
+            \textsc{\Large \class}\\[1.5cm]
         \end{center}
-    \end{minipage}\\[0.5cm]																
-    
+    \end{minipage}\\[0.5cm]
+
     \vspace*{\fill}
-    
-    
-    { \Huge \bfseries \Title}\\[0.4cm]										
-    
+
+
+    { \Huge \bfseries \Title}\\[0.4cm]
+
     \vspace*{\fill}
-    
+
     \begin{minipage}{0.46\textwidth}
         \begin{flushleft} \large
-            \emph{Autor:}\\   																	
-            \Author\\																	
-            
+            \emph{Autor:}\\
+            \Author\\
+
         \end{flushleft}
     \end{minipage}
-    
+
     \begin{minipage}{0.52\textwidth}
         \vspace{-0.6cm}
         \begin{flushright} \large
-            \emph{Profesor:} \\                                                                 
-            \teacher\\                                                   
+            \emph{Profesor:} \\
+            \teacher\\
         \end{flushright}
     \end{minipage}
     \vspace*{1cm}
@@ -220,7 +220,7 @@ En la actualidad no existe un sistema que permita jugar Cariocas de manera digit
 \subsection{Panorama.}\label{cap:panorama}
 El sistema permite al usuario realizar las operaciones básicas del juego de una forma eficaz y libre de errores, las cuales consisten en acciones relacionadas al retirar carta de la baraja, bajar mano, entre otras relacionadas. El sistema se deberá se desarrollar en Python 3 por lo que contará con una interfaz en base a linea de comandos. Contará con una base de datos interna que logrará que los datos estén de manera persistente en el sistema, independientemente si la energia del hardware deja de ser suministrada o no.
 \subsection{Requerimientos Funcionales.}\label{cap:requerimientos-funcionales}
-Las Cariocas son un juego de cartas en el cual consiste en reunir un determinado patrón de cartas basado en su valor númerico o en sus pintas. Para el inicio del juego es menester disponer de una baraja de cartas y una cantidad de 1 a 6 jugadores que deben ser ingresados en el sistema almacenados en una estructura de datos interna la cual se utilizará para una correcta resolución de las rondas del juego. 
+Las Cariocas son un juego de cartas en el cual consiste en reunir un determinado patrón de cartas basado en su valor númerico o en sus pintas. Para el inicio del juego es menester disponer de una baraja de cartas y una cantidad de 1 a 6 jugadores que deben ser ingresados en el sistema almacenados en una estructura de datos interna la cual se utilizará para una correcta resolución de las rondas del juego.
 
 A cada jugador se le debe brindar 12 cartas aleatoriamente las que deberá analizar durante su turno. Los turnos de los jugadores inician cuando el jugador en cuestión retira una carta de la baraja y son finalizados cuando este descarta una carta elegida por el mismo, de su mano actual.
 
@@ -248,8 +248,8 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
         Nombre del escenario:            & Realización Típica de Turnos                                          \\
         Instancia actores participantes: & Jugador: Usuario                                                      \\\hline
         Flujo de eventos:                & 1.-Cada jugador recibe 12 cartas                                      \\
-                                         & 2.-El jugador retira una carta de la   baraja                         \\   
-                                         & 3.-El jugador analiza su mano y descarta una carta                    \\  
+                                         & 2.-El jugador retira una carta de la   baraja                         \\
+                                         & 3.-El jugador analiza su mano y descarta una carta                    \\
                                          & 4.-Se procede al siguiente turno iterando nuevamente la secuencia     \\
                                          & 5.-Si alguno completa el   patrón solicitado por la ronda,            \\
                                          & entonces baja su mano                                                 \\
@@ -281,7 +281,7 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
                                 & 5. Se muestra en pantalla Cartas en la mesa     \\
                                 & 6. Se muestra en pantalla Cartas en descartes   \\
                                 & 7. Se muestra en pantalla Cartas en la mano     \\
-                                & 8. Se muestra en pantalla un menu de opciones   \\ 
+                                & 8. Se muestra en pantalla un menu de opciones   \\
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 1
@@ -298,7 +298,7 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
                                 & 6. Se muestra en pantalla Cartas en la mesa     \\
                                 & 7. Se muestra en pantalla Cartas en descartes   \\
                                 & 8. Se muestra en pantalla Cartas en la mano     \\
-                                & 9. Se muestra en pantalla un menu de opciones   \\ 
+                                & 9. Se muestra en pantalla un menu de opciones   \\
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 2
@@ -315,7 +315,7 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
                                 & 6. Se muestra en pantalla Cartas en la mesa     \\
                                 & 7. Se muestra en pantalla Cartas en descartes   \\
                                 & 8. Se muestra en pantalla Cartas en la mano     \\
-                                & 9. Se muestra en pantalla un menu de opciones   \\ 
+                                & 9. Se muestra en pantalla un menu de opciones   \\
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 3
@@ -332,7 +332,7 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
                                 & 6. Se muestra en pantalla Cartas en la mesa     \\
                                 & 7. Se muestra en pantalla Cartas en descartes   \\
                                 & 8. Se muestra en pantalla Cartas en la mano     \\
-                                & 9. Se muestra en pantalla un menu de opciones   \\ 
+                                & 9. Se muestra en pantalla un menu de opciones   \\
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 4
@@ -349,7 +349,7 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
                                 & 6. Se muestra en pantalla Cartas en la mesa     \\
                                 & 7. Se muestra en pantalla Cartas en descartes   \\
                                 & 8. Se muestra en pantalla Cartas en la mano     \\
-                                & 9. Se muestra en pantalla un menu de opciones   \\ 
+                                & 9. Se muestra en pantalla un menu de opciones   \\
     \end{tabular} \\
 \end{center}
 %FIN CASO DE USO 5
@@ -357,13 +357,13 @@ El software debe estar desarrollado únicamente en Python 3 por solicitud del cl
 
 \subsubsection{Diccionario de datos}\label{cap:diccionario-datos}
 \begin{itemize}
-    \item\textbf{Juego}:Clase que se encarga de implementar las reglas y logica del juego, \\como tambien mostrar los datos necesarios por pantalla tal como el menu del sistema. 
+    \item\textbf{Juego}:Clase que se encarga de implementar las reglas y logica del juego, \\como tambien mostrar los datos necesarios por pantalla tal como el menu del sistema.
     \item\textbf{Jugador}:Entidad que interactua con el juego, baraja y la baraja de descarte. Tiene la capacidad de tomar, dejar, botar cartas.
     \item\textbf{Carta}:Clase para representar las cartas para el juego carioca, estas contienen un id, numero y pinta.
     \item\textbf{PilaDeCartas}:Clase Padre de Baraja y Descarte, la cual tiene como función almacenar instancias de la clase Carta
     \item\textbf{Baraja}:Clase hija de PilaDeCartas. Se almacenan instancias de la clase Cartas que son Generadas al principio del Juego
     \item\textbf{Descarte}:Clase hija de PilaDeCartas. Se almacenan instancias de la clase Cartas que son descartadas por una instancia de la clase Jugador
-    \item\textbf{Tabla}:Objeto de la clase Juego, el cual almacena trios y escalas de los jugadores. 
+    \item\textbf{Tabla}:Objeto de la clase Juego, el cual almacena trios y escalas de los jugadores.
 \end{itemize}
 \clearpage
 \subsubsection{Diagrama de clases.}\label{cap:diagrama-clases}
