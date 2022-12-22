@@ -2,10 +2,12 @@
 \section{Introducción.}\label{cap:intro}
 En el presente documento se realizará un análisis a profundidad de los requerimientos funcionales y no funcionales para la realización del proyecto
 Cariocas, el cual consiste en la implementación de un sistema que permita jugar Cariocas de manera digital a tráves de una terminal de computadora.\\
+\\Según lo solicitado por el cliente, el sistema debe ser capaz de implementar las reglas del juego de Cariocas,
+permitiendo que los jugadores puedan jugar de manera rápida y sin complicaciones, además de otras solicitudes 
+que se detallarán a profundidad en este documento.\\
+\\Además de lo anterior, está incluido en este análisis, un apartado orientado a diagramas de casos de uso,
+diagramas de clases y diagramas de secuencia, los cuales permitirán visualizar de manera más clara la implementación del sistema.\\
 
-
-
-En resumen, el análisis del software para el juego de mesa Cariocas debe abarcar tanto los requerimientos funcionales como no funcionales del sistema, así como también un análisis del usuario para garantizar que el sistema cumpla con sus necesidades y expectativas.
 
 
 \subsection{Próposito del Sistema.}\label{cap:proposito}
@@ -20,6 +22,8 @@ favoritismos ni trucos por parte de ningún jugador.\\
 En resumen, el próposito del sistema de Cariocas es proporcionar una experiencia de juego sencilla y justa para los 
 jugadores, permitiendo que disfruten de la partida de manera plena y sin complicaciones.
 
+
+
 \subsection{Alcance del Sistema.}\label{cap:alcance}
 El sistema se va a encargar de implementar la logica y reglas del juego de tal forma que los jugadores puedan
 interactuar con este a traves de una terminal de computadora. Mencionado lo anterior, es necesario destacar 
@@ -27,10 +31,15 @@ que en todo momento los jugadores pueden observar las cartas de sus contrincante
 
 \subsection{Objetivos y criterios de éxito del proyecto.}\label{cap:objetivos}
 \begin{itemize}
-    \item Entregar un sistema que permita a los jugadores jugar de manera rápida y sin complicaciones.
     \item Garantizar la correcta resolución del juego, libre de errores y contratiempos que afecten la dinámica de este.
-    \item Proporcionar un sistema el cual sea fácil e intuitivo de seguir y usar.
-    \item Entregar un sistema en el que ningún jugador se vea beneficiado más allá de las reglas del juego.
+    \item Proporcionar un sistema el cual se pueda utilizar mediante una linea de comandos.
+    \item Los jugadores puedan jugar las 2 primeras rondas en donde se realizan los patrones de dos trios, y posteriormente, una
+    escala y un trio.
+    \item El jugador que esté jugando la ronda puede sacar una carta del mazo.
+    \item El jugador que esté jugando la ronda puede descartar una carta de su mano.
+    \item El jugador que esté jugando la ronda puede bajar el patrón solicitado por la ronda
+    \item Finalmente, el jugador puede botar una carta de su mano en patrones del otro jugador.
+    \item El jugador puede ganar una partida de cariocas, o perderla según sea el caso.
 \end{itemize}
 
 
@@ -50,7 +59,7 @@ que en todo momento los jugadores pueden observar las cartas de sus contrincante
 \end{description}
 
 \subsection{Referencias}
-Las referencias utilizadas en este informe provienen de los siguientes libros:
+Las referencias utilizadas en este informe provienen de la siguiente documentación:
 \begin{itemize}
     \item \textit{Documentación Oficial de Python} \cite{python}
     \item \textit{¿Como jugar a las cariocas?} \cite{cariocas}
