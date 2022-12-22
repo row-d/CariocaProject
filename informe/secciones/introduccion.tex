@@ -25,8 +25,8 @@ jugadores, permitiendo que disfruten de la partida de manera plena y sin complic
 
 
 \subsection{Alcance del Sistema.}\label{cap:alcance}
-El sistema se va a encargar de implementar la logica y reglas del juego de tal forma que los jugadores puedan
-interactuar con este a traves de una terminal de computadora. Mencionado lo anterior, es necesario destacar 
+El sistema se va a encargar de implementar la logica y reglas del juego presentes en la web de referencia del presente documento, 
+podrá ser jugado por 2 personas y además contará con un registro de puntaje. Mencionado lo anterior, es necesario destacar 
 que en todo momento los jugadores pueden observar las cartas de sus contrincantes.
 
 \subsection{Objetivos y criterios de éxito del proyecto.}\label{cap:objetivos}
@@ -42,21 +42,28 @@ que en todo momento los jugadores pueden observar las cartas de sus contrincante
     \item El jugador puede ganar una partida de cariocas, o perderla según sea el caso.
 \end{itemize}
 
-
-\subsection{Definiciones, siglas y abreviaturas.}\label{cap:definiciones}
-\begin{description}
-    \item[Cariocas] Juego de mesa para dos jugadores.
-    \item[Jugador] Persona que participa en una partida de Cariocas.
-    \item[Partida] Juego de Cariocas entre dos jugadores.
-    \item[Baraja] Conjunto de cartas que se utilizan en una partida de Cariocas.
-    \item[Carta] Una de las 52 cartas que componen una baraja.
-    \item[Pinta] Símbolos que agrupan un determinado tipo de carta, entre ellas existen los siguientes grupos: Picas, Corazones, Rombos y Tréboles.
-    \item[Trio] Agrupación de tres cartas de un mismo valor númerico.
-    \item[Escala] Secuencia de cuatro cartas de una misma pinta y con valor númerico ascendente.
-    \item[Escala Real] Secuencia de doce cartas de una misma pinta y un valor númerico ascendente, corresponden a todas las cartas de la misma pinta exceptuando las cartas Joker.
-    \item[Jack (J)] Corresponde a la primera carta proveniente después de la carta número diez.
-    \item[Queen (Q)] Corresponde a la segunda carta proveniente después de la carta número diez.
-\end{description}
+\pagebreak
+\subsection{Definiciones, siglas y abreviaturas.}\label{cap:definiciones} 
+\begin{itemize}
+    \item \textbf{Cariocas}: Juego de mesa para dos jugadores.
+    \item \textbf{Jugador}: Persona que participa en una partida de Cariocas.
+    \item \textbf{Partida}: Juego de Cariocas entre dos jugadores.
+    \item \textbf{Baraja}: Conjunto de cartas que se utilizan en una partida de Cariocas.
+    \item \textbf{Ronda}: Una ronda es un conjunto de logros que se deben realizar en una partida de Cariocas. Para el sistema propuesto en este documento, se consideran 2 rondas.
+    \item \textbf{Mano}: Conjunto de cartas que posee un jugador en una partida de Cariocas.
+    \item \textbf{Mazo}: Conjunto de cartas que se encuentran en la mesa y que pueden ser utilizadas por los jugadores.
+    \item \textbf{Patrón}: Conjunto de cartas que se deben realizar en una ronda de Cariocas.
+    \item \textbf{Bajada}: Acción de colocar un patrón en la mesa.
+    \item \textbf{Botar}: Acción de colocar una carta de la mano en un patrón de otro jugado
+    \item \textbf{Descartar}: Acción de colocar una carta de la mano en la baraja de descarte.
+    \item \textbf{Sacar}: Acción de colocar una carta de la baraja de descarte o del mazo en la mano.
+    \item \textbf{Carta}: Una de las 52 cartas que componen una baraja.
+    \item \textbf{Pinta}: Símbolos que agrupan un determinado tipo de carta, entre ellas existen los siguientes grupos: Picas, Corazones, Rombos y Tréboles.
+    \item \textbf{Trio}: Agrupación de tres cartas de un mismo valor númerico.
+    \item \textbf{Escala}: Secuencia de cuatro cartas de una misma pinta y con valor númerico ascendente.
+    \item \textbf{Jack (J)}: Corresponde a la primera carta proveniente después de la carta número diez.
+    \item \textbf{Queen (Q)}: Corresponde a la segunda carta proveniente después de la carta número diez.
+\end{itemize} 
 
 \subsection{Referencias}
 Las referencias utilizadas en este informe provienen de la siguiente documentación:
