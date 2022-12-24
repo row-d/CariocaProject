@@ -8,91 +8,103 @@ Para la siguiente sección se considerarán los actores Jugador 1 y Jugador 2, c
 \end{itemize}
 
 %Escenario
-\begin{center}
+\begin{itemize}
+    \item 
     \begin{tabular}{ l | c  }
-        Escenario:            & Alice y Bob recibe una mano \\
-        Actores participantes: & Alice: Usuario  1                                              \\\hline
-                                         & Bob: Usuario    2                                                 \\\hline
-        Flujo de eventos:                & 1.-Los jugadores desean jugar cariocas                                      \\
-                                         & 2.-Se barajan las cartas y luego se reparten 12 cartas\\\hline
-                                         & aleatoriamente a cada jugador. \\\hline
-        Condicion de Salida:             & 3.-Se muestra en pantalla el turno del jugador 1.                          \\\hline
-        \hline
+        Nombre:            & Alice y Bob recibe una mano \\
+        Actores participantes:          & Alice: Usuario  1    \\
+                                        & Bob: Usuario    2    \\\hline
+        Flujo de eventos:               & 1.-Los jugadores desean jugar cariocas    \\
+                                        & 2.-Se barajan las cartas y luego se reparten 12 cartas\\
+                                        & aleatoriamente a cada jugador. \\\hline
+        Condicion de Salida:            & 3.-Se muestra en pantalla el turno del jugador 1.  \\
     \end{tabular}
-    \\
-    \begin{tabular}{ l | c  }
-        Escenario:            & Alice retira una carta del mazo \\
-        Actores participantes: & Alice: Usuario  1                                              \\\hline
-        Flujo de eventos:                & 1.-Es el turno de Alice                                     \\
-                                         & 2.-Alice retira una carta para iniciar su turno \\\hline
-        Condicion de Salida:             & 3.-Se muestra en pantalla las cartas que Alice tiene en su mano \\\hline
-         &incluyendo la carta nueva         \\\hline
-        \hline
-    \end{tabular}
-    \\
-    \begin{tabular}{ l | c  }
-        Escenario:            & Alice retira una carta del mazo de descarte \\
-        Actores participantes: & Alice: Usuario  1                                              \\\hline
-        Flujo de eventos:                & 1.-Es el turno de Alice                                 \\
-                                         & 2.-Alice ve una carta que le es de utilidad para su jugada. \\\hline
-                                         & 3.-Alice retira una carta del mazo de descarte para iniciar su turno. \\\hline
-        Condicion de Salida:             & 4.-Se muestra en pantalla las cartas que Alice tiene en su\\\hline
-        &mano incluyendo la carta nueva                       \\\hline
-        \hline
-    \end{tabular}
-    \\
-    \begin{tabular}{ l | c  }
-        Escenario:            & Alice logra juntar dos trios \\
-        Actores participantes: & Alice: Usuario  1                                              \\\hline
-        Flujo de eventos:                & 1.-Es el turno de Alice                                 \\
-                                         & 2.-Alice roba una carta ya sea del mazo de descarte o el mazo tradicional.\\\hline
-                                         & 3.-Alice se da cuenta de que hay juntado 2 trios y es lo que se pide en la ronda. \\\hline
-                                         & 4.-Alice baja sus trios                      \\\hline
-                                         & 4.-Finaliza su turno dejando una carta en el mazo             \\\hline
-        Condicion de Salida:             & 5.-Se muestra en pantalla las cartas que alice bajó y las remanentes en su mano                   \\\hline
-        \hline
-    \end{tabular}
-    \\
-    \begin{tabular}{ l | c  }
-        Escenario:            & Alice logra juntar una escala y un trio\\
-        Actores participantes: & Alice: Usuario  1                                              \\\hline
-        Flujo de eventos:                & 1.-Es el turno de Alice                                 \\
-                                         & 2.-Alice roba una carta ya sea del mazo de descarte o el mazo tradicional.\\\hline
-                                         & 3.-Alice se da cuenta de que hay juntado un trio y una escala, \\\hline
-                                         &patron que se pide en la ronda. \\\hline
-                                         & 4.-Alice baja su escala y trio                   \\\hline
-                                         & 4.-Finaliza su turno dejando una carta en el mazo             \\\hline
-        Condicion de Salida:             & 5.-Se muestra en pantalla las cartas que alice bajó y las remanentes en su mano                   \\\hline
-        \hline
-    \end{tabular}
-    \\
-    \begin{tabular}{ l | c  }
-        Escenario:            & Alice bota una carta a Bob\\
-        Actores participantes: & Alice: Usuario  1                                              \\\hline
-                                         & Bob: Usuario  2                                              \\\hline
-        Flujo de eventos:                & 1.-Es el turno de Alice                                 \\
-                                         & 2.-Tiene en su mano una carta que coincide con el patrón de Bob.\\\hline
-                                         & 3.-Decide botar la carta en el patrón de bob. \\\hline
-                                         & 4.-Termina su turno descartando una carta               \\\hline
-        Condicion de Salida:             & 5.-Se muestra en pantalla las cartas que alice botó\\\hline
-                                            & y las remanentes en su mano. Además de las cartas que Bob tiene bajadas.             \\\hline
-        \hline
-    \end{tabular}
-    \begin{tabular}{ l | c  }
-        Escenario:            & Alice gana la ronda\\
-        Actores participantes: & Alice: Usuario  1                                              \\\hline
-                                         & Bob: Usuario  2                                              \\\hline
-        Flujo de eventos:                & 1.-Es el turno de Alice                                 \\
-                                         & 2.-Toma una carta del mazo.\\\hline
-                                         & 3.-Decide botar la carta en el patrón de bob. \\\hline
-                                         & 4.-Termina su turno descartando una carta               \\\hline
-                                         & 5.-Alice gana la partida              \\\hline
-        Condicion de Salida:             & 6.-Se muestra en pantalla la victoria de Alice.             \\\hline
-        \hline
-    \end{tabular}
-    
 
-\end{center}
+\item
+    \begin{tabular}{ l | c  }
+        Nombre:                      & Alice y Bob retiran una carta del mazo \\
+        Actores participantes:          & Alice: Usuario  1                                              \\\hline
+                                        & Bob: Usuario    2                                                 \\\hline
+        Flujo de eventos:               & 1. Es el turno de Alice                                      \\
+                                        & 2. Retira una carta para iniciar su turno \\
+                                        & 3. Bob retira una carta para iniciar su turno \\\hline
+        Condicion de Salida:            & 4. Muestra en pantalla las cartas que Alice \\ & y 
+        Bob tienen en su mano.\\
+    \end{tabular}
+\item
+    \begin{tabular}{ l | c  }
+        Nombre:            & Alice retira una carta del mazo \\
+        Actores participantes: & Alice: Usuario  1                                              \\\hline
+        Flujo de eventos:               & 1.-Es el turno de Alice                                     \\
+                                        & 2.-Alice retira una carta para iniciar su turno \\\hline
+        Condicion de Salida:            & 3.-Se muestra en pantalla las cartas que Alice tiene en su mano \\
+                                        &incluyendo la carta nueva         \\
+    \end{tabular}
+\item
+    \begin{tabular}{ l | c  }
+        Nombre:                      & Alice retira una carta del mazo de descarte \\
+        Actores participantes:          & Alice: Usuario  1                                              \\\hline
+        Flujo de eventos:               & 1.-Es el turno de Alice \\
+                                        & 2.-Alice ve una carta que le es de utilidad para su jugada. \\
+                                        & 3.-Alice retira una carta del mazo de descarte\\ & para iniciar su turno. \\\hline
+        Condicion de Salida:            & 4.-Se muestra en pantalla las cartas que Alice tiene en su\\
+                                        &mano incluyendo la carta nueva\\
+    \end{tabular}
+    \\
+\item
+    \begin{tabular}{ l | c  }
+        Nombre:                      & Alice logra juntar dos trios \\
+        Actores participantes:          & Alice: Usuario  1                                              \\\hline
+        Flujo de eventos:               & 1.-Es el turno de Alice                                 \\
+                                        & 2.-Alice roba una carta ya sea del mazo de descarte o el mazo tradicional.\\
+                                        & 3.-Alice se da cuenta de que hay juntado 2 trios. \\
+                                        & 4.-Alice baja sus trios                      \\
+                                        & 4.-Finaliza su turno dejando una carta en el mazo             \\\hline
+        Condicion de Salida:            & 5.-Se muestra en pantalla las cartas que alice \\ & bajó y las remanentes en su mano 
+                                            \\\hline
+    \end{tabular}
+    \\
+\item
+    \begin{tabular}{ l | c  }
+        Nombre:            & Alice logra juntar una escala y un trio\\
+        Actores participantes: & Alice: Usuario  1                                              \\\hline
+        Flujo de eventos:               & 1.-Es el turno de Alice                                 \\
+                                        & 2.-Alice roba una carta ya sea del mazo de descarte o el mazo tradicional.\\
+                                        & 3.-Alice se da cuenta de que hay juntado un trio y una escala, \\
+                                        &patron que se pide en la ronda. \\
+                                        & 4.-Alice baja su escala y trio                   \\
+                                        & 4.-Finaliza su turno dejando una carta en el mazo             \\
+        Condicion de Salida:            & 5.-Se muestra en pantalla las cartas que alice \\ &bajó y las remanentes en su mano\\\hline
+    \end{tabular}
+    \\
+\item
+
+        \begin{tabular}{ l | c  }
+            Nombre:            & Alice bota una carta a Bob\\
+            Actores participantes: & Alice: Usuario  1                                              \\
+                                            & Bob: Usuario  2                                              \\\hline
+            Flujo de eventos:               & 1.-Es el turno de Alice                                 \\
+                                            & 2.-Tiene en su mano una carta que\\ & coincide con el patrón de Bob.\\
+                                            & 3.-Decide botar la carta en el patrón de bob. \\
+                                            & 4.-Termina su turno descartando una carta               \\
+            Condicion de Salida:            & 5.-Se muestra en pantalla las cartas que alice botó\\
+                                                & y las remanentes en su mano. Además de las \\ & cartas que Bob tiene bajadas.             \\\hline
+            \hline
+        \end{tabular}
+\item
+        \begin{tabular}{ l | c  }
+            Nombre:            & Alice gana la ronda\\
+            Actores participantes: & Alice: Usuario  1 \\
+                                            & Bob: Usuario  2  \\\hline
+            Flujo de eventos:               & 1.-Es el turno de Alice                                 \\
+                                            & 2.-Toma una carta del mazo.\\\hline
+                                            & 3.-Decide botar la carta en el patrón de bob. \\\hline
+                                            & 4.-Termina su turno descartando una carta \\\hline
+                                            & 5.-Alice gana la partida \\\hline
+            Condicion de Salida:            & 6.-Se muestra en pantalla la victoria de Alice. \\\hline
+        \end{tabular}
+            
+\end{itemize}
 \subsubsection{Modelos de casos de uso.}\label{cap:modelos-casos-uso}
 \clearpage
 \begin{figure}[h]
