@@ -107,10 +107,9 @@ Para la siguiente sección se considerarán los actores Jugador 1 y Jugador 2, c
             
 \end{itemize}
 \subsubsection{Modelos de casos de uso.}\label{cap:modelos-casos-uso}
-\clearpage
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{imagenes/diagramas/casosdeuso.png}
+    \includegraphics[height=15cm, width=15cm]{imagenes/diagramas/casosdeuso.png}
     \caption{Diagrama de casos de uso generalizado.}
 \end{figure}
 %CASO DE USO 1
@@ -196,18 +195,19 @@ Para la siguiente sección se considerarán los actores Jugador 1 y Jugador 2, c
                                 & 9. Se muestra en pantalla un menu de opciones   \\ 
     \end{tabular} \\
 \end{center}
-%FIN CASO DE USO 5
+%FIN CASO DE USO 5 
 
 
 \subsubsection{Diccionario de datos}\label{cap:diccionario-datos}
 \begin{itemize}
-    \item\textbf{Juego}:Clase que se encarga de implementar las reglas y logica del juego, \\como tambien mostrar los datos necesarios por pantalla tal como el menu del sistema. 
-    \item\textbf{Jugador}:Entidad que interactua con el juego, baraja y la baraja de descarte. Tiene la capacidad de tomar, dejar, botar cartas.
-    \item\textbf{Carta}:Clase para representar las cartas para el juego carioca, estas contienen un id, numero y pinta.
-    \item\textbf{Mazo}:Clase Padre de Deck y DiscardDeck, la cual tiene como función almacenar instancias de la clase Card
-    \item\textbf{Deck}:Clase hija de CardStack. Se almacenan instancias de la clase Cartas que son Generadas al principio del Juego
-    \item\textbf{DiscardDeck}:Clase hija de CardStack. Se almacenan instancias de la clase Cartas que son descartadas por una instancia de la clase Player
-    \item\textbf{Table}:Objeto de la clase Game, el cual almacena trios y escalas de los jugadores. 
+    \item\textbf{Juego}: Clase que se encarga de implementar las reglas y logica del juego, \\como tambien mostrar los datos necesarios por pantalla tal como el menu del sistema. 
+    \item\textbf{Jugador}: Entidad que interactua con el juego, baraja y la baraja de descarte. Tiene la capacidad de tomar, dejar, botar cartas.
+    \item\textbf{Carta}: Clase para representar las cartas para el juego carioca, estas contienen un id, numero y pinta.
+    \item\textbf{Mazo}: Clase Padre de Mazo y MazoDescarte. Se almacenan instancias de la clase Cartas que son Generadas al principio del Juego
+    \item\textbf{Deck}: Clase hija de CardStack. Se almacenan instancias de la clase Cartas que son Generadas al principio del Juego
+    \item\textbf{PiladeCartas}: Se almacenan instancias de la clase Cartas que son descartadas por una instancia de la clase Jugador
+    \item\textbf{Pantalla}: Clase que contiene los métodos relacionados a menu de inicio, mostrar estadísticas y mostrar mazos. 
+    \item\textbf{MazoDescarte}: Almacena las cartas descartadas por los jugadores.
 \end{itemize}
 \clearpage
 \subsubsection{Diagrama de clases.}\label{cap:diagrama-clases}
@@ -218,4 +218,11 @@ A continuación se presenta el diagrama de clases del sistema a programar para e
     \caption{Diagrama de clases para el juego de cartas Cariocas.}
 \end{figure}
 
-\clearpage
+\subsubsection{Diagrama de secuencias.}\label{cap:diagrama-secuencias}
+A continuación se presenta el diagrama de secuencias del sistema:
+\begin{figure}[H]
+    \centering
+    %\includegraphics[width=15cm]{diclass.png}
+    \caption{Diagrama de secuencias para el juego de cartas Cariocas.}
+\end{figure}
+
