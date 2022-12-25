@@ -1,0 +1,84 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{cariocas}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b2ccdaff94094f94031526a4cbb9ae19}{%
+           family={Cartas\bibnamedelima 10},
+           familyi={C\bibinitperiod\bibinitdelim 1\bibinitperiod},
+           given={Juegos},
+           giveni={J\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{b2ccdaff94094f94031526a4cbb9ae19}
+      \strng{fullhash}{b2ccdaff94094f94031526a4cbb9ae19}
+      \strng{bibnamehash}{b2ccdaff94094f94031526a4cbb9ae19}
+      \strng{authorbibnamehash}{b2ccdaff94094f94031526a4cbb9ae19}
+      \strng{authornamehash}{b2ccdaff94094f94031526a4cbb9ae19}
+      \strng{authorfullhash}{b2ccdaff94094f94031526a4cbb9ae19}
+      \field{labelalpha}{Car22}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Juego de Cartas Carioca}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://juegosdecartas10.com/juego-de-cartas-carioca/
+      \endverb
+      \verb{url}
+      \verb https://juegosdecartas10.com/juego-de-cartas-carioca/
+      \endverb
+    \endentry
+    \entry{python}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9688a568902e4b07b60557b566bdd820}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={Python\bibnamedelima Software},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9688a568902e4b07b60557b566bdd820}
+      \strng{fullhash}{9688a568902e4b07b60557b566bdd820}
+      \strng{bibnamehash}{9688a568902e4b07b60557b566bdd820}
+      \strng{authorbibnamehash}{9688a568902e4b07b60557b566bdd820}
+      \strng{authornamehash}{9688a568902e4b07b60557b566bdd820}
+      \strng{authorfullhash}{9688a568902e4b07b60557b566bdd820}
+      \field{labelalpha}{Fou22}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Last update on Dec 21, 2022}
+      \field{title}{The Python Standard Library}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://docs.python.org/3/library/index.html
+      \endverb
+      \verb{url}
+      \verb https://docs.python.org/3/library/index.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

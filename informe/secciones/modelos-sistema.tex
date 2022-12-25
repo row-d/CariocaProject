@@ -1,3 +1,4 @@
+
 \subsection{Modelos del sistema.}\label{cap:modelos-sistema}
 
 \subsubsection{Escenarios.}\label{cap:escenarios}
@@ -56,7 +57,7 @@ Para la siguiente sección se considerarán los actores Jugador 1 y Jugador 2, c
         Nombre:                      & Alice logra juntar dos trios \\
         Actores participantes:          & Alice: Usuario  1                                              \\\hline
         Flujo de eventos:               & 1.-Es el turno de Alice                                 \\
-                                        & 2.-Alice roba una carta ya sea del mazo de descarte o el mazo tradicional.\\
+                                        & 2.-Alice roba una carta ya sea del mazo de descarte \\ & o el mazo tradicional.\\
                                         & 3.-Alice se da cuenta de que hay juntado 2 trios. \\
                                         & 4.-Alice baja sus trios                      \\
                                         & 4.-Finaliza su turno dejando una carta en el mazo             \\\hline
@@ -69,7 +70,7 @@ Para la siguiente sección se considerarán los actores Jugador 1 y Jugador 2, c
         Nombre:            & Alice logra juntar una escala y un trio\\
         Actores participantes: & Alice: Usuario  1                                              \\\hline
         Flujo de eventos:               & 1.-Es el turno de Alice                                 \\
-                                        & 2.-Alice roba una carta ya sea del mazo de descarte o el mazo tradicional.\\
+                                        & 2.-Alice roba una carta ya sea del mazo de descarte \\ & o el mazo tradicional.\\
                                         & 3.-Alice se da cuenta de que hay juntado un trio y una escala, \\
                                         &patron que se pide en la ronda. \\
                                         & 4.-Alice baja su escala y trio                   \\
@@ -97,19 +98,19 @@ Para la siguiente sección se considerarán los actores Jugador 1 y Jugador 2, c
             Actores participantes: & Alice: Usuario  1 \\
                                             & Bob: Usuario  2  \\\hline
             Flujo de eventos:               & 1.-Es el turno de Alice                                 \\
-                                            & 2.-Toma una carta del mazo.\\\hline
-                                            & 3.-Decide botar la carta en el patrón de bob. \\\hline
-                                            & 4.-Termina su turno descartando una carta \\\hline
+                                            & 2.-Toma una carta del mazo.\\
+                                            & 3.-Decide botar la carta en el patrón de bob. \\
+                                            & 4.-Termina su turno descartando una carta \\
                                             & 5.-Alice gana la partida \\\hline
-            Condicion de Salida:            & 6.-Se muestra en pantalla la victoria de Alice. \\\hline
+            Condicion de Salida:            & 6.-Se muestra en pantalla la victoria de Alice. \\
         \end{tabular}
             
 \end{itemize}
 \subsubsection{Modelos de casos de uso.}\label{cap:modelos-casos-uso}
 \clearpage
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    %\includegraphics[width=15cm]{use-cases.png}
+    \includegraphics[width=10cm]{imagenes/diagramas/casosdeuso.png}
     \caption{Diagrama de casos de uso generalizado.}
 \end{figure}
 %CASO DE USO 1
@@ -200,10 +201,10 @@ Para la siguiente sección se considerarán los actores Jugador 1 y Jugador 2, c
 
 \subsubsection{Diccionario de datos}\label{cap:diccionario-datos}
 \begin{itemize}
-    \item\textbf{Game}:Clase que se encarga de implementar las reglas y logica del juego, \\como tambien mostrar los datos necesarios por pantalla tal como el menu del sistema. 
-    \item\textbf{Player}:Entidad que interactua con el juego, baraja y la baraja de descarte. Tiene la capacidad de tomar, dejar, botar cartas.
-    \item\textbf{Card}:Clase para representar las cartas para el juego carioca, estas contienen un id, numero y pinta.
-    \item\textbf{CardStack}:Clase Padre de Deck y DiscardDeck, la cual tiene como función almacenar instancias de la clase Card
+    \item\textbf{Juego}:Clase que se encarga de implementar las reglas y logica del juego, \\como tambien mostrar los datos necesarios por pantalla tal como el menu del sistema. 
+    \item\textbf{Jugador}:Entidad que interactua con el juego, baraja y la baraja de descarte. Tiene la capacidad de tomar, dejar, botar cartas.
+    \item\textbf{Carta}:Clase para representar las cartas para el juego carioca, estas contienen un id, numero y pinta.
+    \item\textbf{Mazo}:Clase Padre de Deck y DiscardDeck, la cual tiene como función almacenar instancias de la clase Card
     \item\textbf{Deck}:Clase hija de CardStack. Se almacenan instancias de la clase Cartas que son Generadas al principio del Juego
     \item\textbf{DiscardDeck}:Clase hija de CardStack. Se almacenan instancias de la clase Cartas que son descartadas por una instancia de la clase Player
     \item\textbf{Table}:Objeto de la clase Game, el cual almacena trios y escalas de los jugadores. 
