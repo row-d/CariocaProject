@@ -13,8 +13,13 @@ style: |
   }
 ---
 # Proyecto Cariocas
-##### Lucas Ayala Casanova
-##### David Gómez Pinto
+
+### Lucas Ayala Casanova
+### David Gómez Pinto
+
+##### Profesor: Diego Maldonado Montiel
+
+
 
 ![bg right 95%](https://www.ucsc.cl/wp-content/uploads/2022/09/logo-ucsc-rojo-2022.png)
 
