@@ -18,16 +18,6 @@ class Carta:
             raise TypeError(
                 "El parámetro __o debe ser una instancia de la clase Carta")
         return self.pinta == __o.pinta and self.valor == __o.valor and self.color == __o.color
-    # overload "+" operator
-
-    def __add__(self, __o: object) -> int:
-        if isinstance(__o, int):
-            return self.valor.value + __o
-
-        if not isinstance(__o, Carta):
-            raise TypeError(
-                "El parámetro __o debe ser una instancia de la clase Carta")
-        return self.valor.value + __o.valor.value
 
 
 Cartas = List[Carta]

@@ -1,6 +1,7 @@
 from core.classes.Mazo import Mazo
 from core.classes.MazoDescarte import MazoDescarte
 from core.classes.Jugador import Jugador, Jugadores
+from core.classes.Ronda import Rondas
 
 
 class Partida:
@@ -21,7 +22,7 @@ class Partida:
         self.mazo = mazo
         self.descarte = descarte
         self.jugadores: Jugadores = jugadores
-        self.rondas = []
+        self.rondas: Rondas = []
 
     def agregar_ronda(self, ronda):
         self.rondas.append(ronda)

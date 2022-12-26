@@ -29,6 +29,10 @@ class Jugador(EventEmitter):
         self.baja: Baja = []
         self._mano: Cartas = []
 
+    def descartar_carta(self, carta):
+        self.emit("descartar", carta)
+        self._mano.remove(carta)
+
     def recibir_mano(self, mano):
         if not isinstance(mano, list):
             raise RecepcionManoInvalida()
@@ -47,11 +51,13 @@ class Jugador(EventEmitter):
             raise ValueError("El parámetro tipo debe ser 'trio' o 'escala'")
         if tipo == "trio" and es_trio:
             self.baja.append(patron)
-            self.puntaje = self.puntaje + reduce(lambda x, y: x + y, patron, 0)
+            self.puntaje = self.puntaje + \
+                reduce(lambda x, y: x + y.valor.value, patron, 0)
             self._mano = [carta for carta in self._mano if carta not in patron]
         elif tipo == "escala" and es_escala:
             self.baja.append(patron)
-            self.puntaje = self.puntaje + reduce(lambda x, y: x + y, patron, 0)
+            self.puntaje = self.puntaje + \
+                reduce(lambda x, y: x + y.valor.value, patron, 0)
             self._mano = [carta for carta in self._mano if carta not in patron]
 
     def botar_carta(self, carta: str, contrincante=None):

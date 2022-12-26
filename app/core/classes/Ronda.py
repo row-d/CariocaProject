@@ -42,3 +42,6 @@ class Ronda:
             if carta.pinta != patron[0].pinta:
                 return False
         return True
+
+
+Rondas = List[Ronda]

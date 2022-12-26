@@ -166,8 +166,11 @@ class ControlJuego:
                                                                   0)
                     if subseleccion == 0:
                         self.refrescar_pantalla(self.partida, contrincante)
+            # verificar bajas si cumplen con los requisitos de la ronda
+            for __jugador in self.partida.jugadores:
+                if self.partida.rondas[self.turno].verificar_patrones(__jugador.baja):
+                    self.partida.rondas.pop(0)
+                    self.pantalla.borrar()
 
-            self.partida.rondas.pop(0)
-            self.pantalla.borrar()
         ganador = self.partida.obtener_ganador()
         self.pantalla.mensaje_ganador(ganador)
