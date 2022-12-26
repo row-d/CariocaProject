@@ -81,7 +81,7 @@ https://juegosdecartas10.com/juego-de-cartas-carioca/
 ![bg fit](./images/escenario1.png)
 
 ---
----
+
 
 ![bg fit](./images/escenario2.png)
 
@@ -97,12 +97,11 @@ https://juegosdecartas10.com/juego-de-cartas-carioca/
 # Capturas de pantalla de la interfaz
 
 ---
-
 ![width:700px](./images/menu1.jpg)
 ![width:700px](./images/menu2.jpg)
 ![width:700px](./images/menu3.jpg)
 ---
-
+---
 ![height:700px bg ](./images/menu4.jpg)
 
 ---
