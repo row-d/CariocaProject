@@ -51,7 +51,7 @@ https://juegosdecartas10.com/juego-de-cartas-carioca/
 
 - Tomar una carta de la baraja.
 - Descartar una carta de su mano.
-- Bajar una carta de su mano.
+- Bajar un patrón de su mano.
 - Botar una carta de su mano.
 - Ver las cartas de la baraja.
 - Ver las cartas de la mesa.
