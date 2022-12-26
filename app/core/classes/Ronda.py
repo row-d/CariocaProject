@@ -35,11 +35,11 @@ class Ronda:
             return False
         patron.sort(key=lambda carta: carta.valor)
         valor_actual = patron[0].valor
-        for carta in range(1, len(patron)):
-            if carta.valor != valor_actual + 1:
+        for i in range(1, len(patron)):
+            if patron[i].valor != valor_actual + 1:
                 return False
-            valor_actual = carta.valor
-            if carta.pinta != patron[0].pinta:
+            valor_actual = patron[i].valor
+            if patron[i].pinta != patron[0].pinta:
                 return False
         return True
 

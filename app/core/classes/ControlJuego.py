@@ -85,6 +85,8 @@ class ControlJuego:
         for _jugador in self.partida.jugadores:
             _jugador.on("Tomar Carta",
                         lambda j: j.recibir_carta(self.partida.mazo.tomar_carta()))
+            _jugador.on(
+                "descartar", lambda carta: self.partida.descarte.agregar_carta(carta))
 
         while (self.partida.rondas != 0):
             while (any(jugador.tiene_cartas() for jugador in self.partida.jugadores)):
@@ -128,8 +130,19 @@ class ControlJuego:
                         jugador.bajar_patron(cartas, "escala")
                 # descartar carta
                 if seleccion == 4:
-                    jugador.descartar_carta()
-                    self.turno = (self.turno + 1) % len(self.partida.jugadores)
+                    self.pantalla.borrar()
+                    self.pantalla.mostrar_cartas(jugador._mano)
+                    self.pantalla.mensaje_personalizado(
+                        f"\n1.Seleccionar cartas")
+                    subseleccion = self.pantalla.consultar_opcion(
+                        int, *range(0, 2))
+                    if subseleccion == 0:
+                        self.refrescar_pantalla(self.partida, jugador)
+                    elif subseleccion == 1:
+                        carta = self.pantalla.consultar_seleccion_carta()
+                        jugador.descartar_carta(carta)
+                        self.turno = (
+                            self.turno + 1) % len(self.partida.jugadores)
 
                 # ver mano
                 if seleccion == 5:

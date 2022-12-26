@@ -59,25 +59,5 @@
       "language": "latex",
       "scheme": "file"
     }
-  ],
-  "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#894460",
-    "activityBar.background": "#894460",
-    "activityBar.foreground": "#e7e7e7",
-    "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#1e2b15",
-    "activityBarBadge.foreground": "#e7e7e7",
-    "commandCenter.border": "#e7e7e799",
-    "sash.hoverBorder": "#894460",
-    "statusBar.background": "#673348",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#894460",
-    "statusBarItem.remoteBackground": "#673348",
-    "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#673348",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#67334899",
-    "titleBar.inactiveForeground": "#e7e7e799"
-  },
-  "peacock.remoteColor": "#673348"
+  ]
 }

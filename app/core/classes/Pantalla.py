@@ -13,6 +13,9 @@ class Pantalla:
     def mensaje_repartiendo_cartas(self):
         print("Repartiendo cartas...")
 
+    def mensaje_personalizado(self, mensaje: str):
+        print(mensaje)
+
     def mensaje_ganador(self, jugador):
         if jugador == None:
             print("No hay ganador")
@@ -34,7 +37,7 @@ class Pantalla:
         return str_a_cartas(input("Ingrese su seleccion de cartas (formato: valor1,pinta1,color1 valor2,pinta2,color2):\n"))
 
     def consultar_seleccion_carta(self):
-        return str_a_carta(input("Ingrese su seleccion de cartas (formato: valor1,pinta1,color1 valor2,pinta2,color2):\n"))
+        return str_a_carta(input("Ingrese su seleccion de cartas (formato: valor1,pinta1,color1:\n"))
 
     def info_partida(self, jugadores, ronda: Ronda, n_ronda: int):
         print(
