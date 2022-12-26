@@ -1,6 +1,6 @@
-from app.core.classes.Mazo import Mazo
-from app.core.classes.MazoDescarte import MazoDescarte
-from app.core.classes.Jugador import Jugador
+from core.classes.Mazo import Mazo
+from core.classes.MazoDescarte import MazoDescarte
+from core.classes.Jugador import Jugador, Jugadores
 
 
 class Partida:
@@ -20,8 +20,17 @@ class Partida:
                     "El parámetro jugadores debe ser una lista de instancias de la clase Jugador")
         self.mazo = mazo
         self.descarte = descarte
-        self.jugadores = jugadores
+        self.jugadores: Jugadores = jugadores
         self.rondas = []
 
     def agregar_ronda(self, ronda):
         self.rondas.append(ronda)
+
+    def obtener_ganador(self):
+        puntajes = []
+        for jugador in self.jugadores:
+            puntajes.append(jugador.puntaje)
+        # verifica si hubo empate
+        if puntajes.count(max(puntajes)) > 1:
+            return None
+        return self.jugadores[puntajes.index(max(puntajes))]

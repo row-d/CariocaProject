@@ -1,7 +1,7 @@
-from enum import IntEnum
+from enum import Enum
 
 
-class Pinta(IntEnum):
+class Pinta(Enum):
     DIAMANTE = 1
     CORAZON = 2
     PICA = 3

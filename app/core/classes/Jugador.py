@@ -1,63 +1,67 @@
+from typing import List
+from functools import reduce
 from core.lib.event import EventEmitter
-from core.classes.Carta import Carta
+from core.classes.Ronda import Ronda
+from core.classes.Carta import Carta, Cartas, Baja, str_a_carta, str_a_cartas
 
 
 class PatronInvalido(Exception):
     def __init__(self):
-        super().__init__("No se puede bajar el patron puesto que no se tiene la carta")
+        super().__init__("No se puede bajar el patron puesto que no cumple con las reglas de la ronda")
 
 
 class NoExisteEnMano(Exception):
-    def __init__(self):
-        super().__init__("No se puede botar la carta ya que no se tiene en la mano")
+    def __init__(self, carta):
+        super().__init__(
+            f"La carta: {carta} no esta en la mano")
 
 
-class RecepcionManoInvalida(Exception):
+class RecepcionManoInvalida(TypeError):
     def __init__(self):
         super().__init__("No se puede recibir la mano ya que no se tiene cartas (Input vacio). ")
 
 
 class Jugador(EventEmitter):
     def __init__(self, nombre):
+        super().__init__()
         self.nombre = nombre
         self.puntaje = 0
-        self.bajas = []
-        self._mano = []
-        pass
+        self.baja: Baja = []
+        self._mano: Cartas = []
 
     def recibir_mano(self, mano):
-        if len(mano) != 0:
-            self.mano = mano
-        else:
+        if not isinstance(mano, list):
             raise RecepcionManoInvalida()
+        for carta in mano:
+            if not isinstance(carta, Carta):
+                raise RecepcionManoInvalida()
+        if len(mano) > 0:
+            self._mano = mano
 
-    def bajar_patron(self, patron: str):
-        listaPatron = [x.split(",") for x in patron.split(" ")]
-        patronReal = []
+    def bajar_patron(self, patron: Cartas, tipo: str):
+        es_trio = Ronda.es_trio(patron)
+        es_escala = Ronda.es_escala(patron)
+        if not isinstance(tipo, str):
+            raise TypeError("El parámetro tipo debe ser una cadena de texto")
+        if tipo not in ["trio", "escala"]:
+            raise ValueError("El parámetro tipo debe ser 'trio' o 'escala'")
+        if tipo == "trio" and es_trio:
+            self.baja.append(patron)
+            self.puntaje = self.puntaje + reduce(lambda x, y: x + y, patron, 0)
+            self._mano = [carta for carta in self._mano if carta not in patron]
+        elif tipo == "escala" and es_escala:
+            self.baja.append(patron)
+            self.puntaje = self.puntaje + reduce(lambda x, y: x + y, patron, 0)
+            self._mano = [carta for carta in self._mano if carta not in patron]
 
-        for i in range(len(listaPatron)):
-            valor = listaPatron[i][0]
-            pinta = listaPatron[i][1]
-            color = listaPatron[i][2]
-            carta_mano = self.mano[i]
-            if carta_mano.valor == valor and carta_mano.pinta == pinta and carta_mano.color == color:
-                patronReal.append(carta_mano)
-            else:
-                raise PatronInvalido()
-
-    def botar_cartas(self, carta):
-        listaCartas = carta.split(" ")
-        carta_mano = []
-        for i in range(len(listaCartas)):
-            valor = listaCartas[i][0]
-            pinta = listaCartas[i][1]
-            color = listaCartas[i][2]
-            carta_mano = self.mano[i]
-            if carta_mano.valor == valor and carta_mano.pinta == pinta and carta_mano.color == color:
-                self.bajas.append(carta_mano)
-                return carta_mano
-            else:
-                raise NoExisteEnMano()
+    def botar_carta(self, carta: str, contrincante=None):
+        if carta not in self._mano:
+            raise NoExisteEnMano()
+        if isinstance(contrincante, Jugador):
+            contrincante.trios.append(carta)
+        else:
+            self.tr
+        self._mano.remove(carta)
 
     def tomar_carta(self):
         self.emit("Tomar Carta", self)
@@ -66,7 +70,10 @@ class Jugador(EventEmitter):
         if not isinstance(carta, Carta):
             raise TypeError(
                 "El parámetro carta debe ser una instancia de la clase Carta")
-        self.mano.append(carta)
+        self._mano.append(carta)
 
     def tiene_cartas(self):
-        return len(self.mano) > 0
+        return len(self._mano) > 0
+
+
+Jugadores = List[Jugador]

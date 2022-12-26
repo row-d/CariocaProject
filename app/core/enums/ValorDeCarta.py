@@ -1,24 +1,16 @@
-from enum import IntEnum
+from enum import Enum
 
 
-class ValorDeCarta(IntEnum):
-    """
-    Enumeración de los valores de las cartas.
-    Ejemplos de uso:
-      ValorDeCarta(2)
-      ValorDeCarta.K
-      ValorDeCarta(13)
-      ValorDeCarta['K']
-    """
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-    10
+class ValorDeCarta(Enum):
+    DOS = 2
+    TRES = 3
+    CUATRO = 4
+    CINCO = 5
+    SEIS = 6
+    SIETE = 7
+    OCHO = 8
+    NUEVE = 9
+    DIEZ = 10
     J = 11
     Q = 12
     K = 13

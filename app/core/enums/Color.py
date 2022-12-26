@@ -1,6 +1,6 @@
-from enum import IntEnum
+from enum import Enum
 
 
-class Color(IntEnum):
+class Color(Enum):
     NEGRO = 30
     ROJO = 31
