@@ -1,6 +1,6 @@
-import json
+from core.classes.Pantalla import Pantalla
+from core.classes.ControlJuego import ControlJuego
 
-
-config = json.load(open("config.json"))
-for key, value in config.items():
-    print(key, value)
+pantalla = Pantalla()
+juego = ControlJuego(pantalla)
+juego.iniciar_juego()

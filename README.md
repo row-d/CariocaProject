@@ -52,6 +52,7 @@
 - [ ] ¿Es necesario que el codigo tenga clases abstractas (ABC) ?
 
 ## Dudas Cliente
+
 - [ ] ¿Que es lo que le gustaría que se implementara en el juego?
 - [ ] ¿El juego debe tener un tablero?
 - [ ] ¿El juego debe tener un registro?

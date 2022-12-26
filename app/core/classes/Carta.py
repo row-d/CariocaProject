@@ -1,23 +1,10 @@
-class CardInterface:
-    def __init__(self, id: str, number: int, pinta: str):
-        pass
+from core.enums.Pinta import Pinta
+from core.enums.ValorDeCarta import ValorDeCarta
+from core.enums.Color import Color
 
-    @property
-    def id(self):
-        raise NotImplementedError("id property not implemented")
 
-    @property
-    def number(self):
-        raise NotImplementedError("number property not implemented")
-
-    @number.setter
-    def number(self, value):
-        raise NotImplementedError("number property not implemented")
-
-    @property
-    def pinta(self):
-        raise NotImplementedError("pinta property not implemented")
-
-    @pinta.setter
-    def pinta(self, value):
-        raise NotImplementedError("pinta property not implemented")
+class Carta:
+    def __init__(self, pinta: int, valor: int, color: int) -> None:
+        self.pinta = pinta
+        self.valor = valor
+        self.color = color
